@@ -18,7 +18,9 @@ class create_song(unittest.TestCase):
     def test_create_song(self):
         success = True
         wd = self.wd
+        # open home page
         wd.get("https://cross-auth-staging.herokuapp.com/?redirect_uri=https%3A%2F%2Fcross-edit-staging-frontend.herokuapp.com%2F")
+        # login
         wd.find_element_by_name("email").click()
         wd.find_element_by_name("email").clear()
         wd.find_element_by_name("email").send_keys("pavel.kosicin@wearevolt.com")
@@ -26,11 +28,13 @@ class create_song(unittest.TestCase):
         wd.find_element_by_name("password").clear()
         wd.find_element_by_name("password").send_keys("abcd1234")
         wd.find_element_by_xpath("//div[@class='sign-in-control-box']//button[.='Log In']").click()
+        # create song
         wd.find_element_by_css_selector("input.form-control").click()
         wd.find_element_by_css_selector("input.form-control").clear()
         wd.find_element_by_css_selector("input.form-control").send_keys("song_A")
         wd.find_element_by_css_selector("button.btn.btn-green").click()
         wd.find_element_by_xpath("//div[@class='modal-body']//button[.='song']").click()
+        # song modification
         wd.find_element_by_id("song_iswc_identification_new").click()
         wd.find_element_by_id("song_iswc_identification_new").clear()
         wd.find_element_by_id("song_iswc_identification_new").send_keys("Q-548.132.789-0")
@@ -55,11 +59,15 @@ class create_song(unittest.TestCase):
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys("TEST TEXT")
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
+        # return to the global search page
         wd.find_element_by_link_text("Global search").click()
+        # find created song
         wd.find_element_by_css_selector("input.form-control").click()
         wd.find_element_by_css_selector("input.form-control").clear()
         wd.find_element_by_css_selector("input.form-control").send_keys("song_A")
+        # choose found song
         wd.find_element_by_link_text("Song_A").click()
+        # logout
         wd.find_element_by_xpath("//nav[@id='rubix-nav-header']/div/div/div[3]/div/ul/li[7]/a/span").click()
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         self.assertTrue(success)

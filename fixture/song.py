@@ -1,23 +1,14 @@
 __author__ = 'Pavel Kosicin'
-from selenium.webdriver.firefox.webdriver import WebDriver
-from fixture.session import SessionHelper
-from fixture.song import SongHelper
 
 
-class Application:
+class SongHelper:
 
-    def __init__(self):
-        self.wd = WebDriver()
-        self.wd.implicitly_wait(30)
-        self.session = SessionHelper(self)
-        self.song = SongHelper(self)
 
-    def open_home_page(self):
-        wd = self.wd
-        wd.get("https://cross-auth-staging.herokuapp.com/?redirect_uri=https%3A%2F%2Fcross-edit-staging-frontend.herokuapp.com%2F")
+    def __init__(self, app):
+        self.app = app
 
     def create(self, song):
-        wd = self.wd
+        wd = self.app.wd
         # create song
         wd.find_element_by_css_selector("input.form-control").click()
         wd.find_element_by_css_selector("input.form-control").clear()
@@ -52,17 +43,14 @@ class Application:
         self.return_to_global_search()
 
     def return_to_global_search(self):
-        wd = self.wd
+        wd = self.app.wd
         wd.find_element_by_link_text("Global search").click()
 
     def find(self, name):
-        wd = self.wd
+        wd = self.app.wd
         # find created song
         wd.find_element_by_css_selector("input.form-control").click()
         wd.find_element_by_css_selector("input.form-control").clear()
         wd.find_element_by_css_selector("input.form-control").send_keys(name)
         # choose found song
         wd.find_element_by_link_text(name.title()).click()
-
-    def destroy(self):
-        self.wd.quit()

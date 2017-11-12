@@ -2,9 +2,10 @@
 __author__ = 'Pavel Kosicin'
 
 
-from song import Song
-from application import Application
 import pytest
+
+from fixture.application import Application
+from model.song import Song
 
 
 @pytest.fixture

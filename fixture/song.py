@@ -3,7 +3,6 @@ __author__ = 'Pavel Kosicin'
 
 class SongHelper:
 
-
     def __init__(self, app):
         self.app = app
 
@@ -40,11 +39,7 @@ class SongHelper:
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(song.note)
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
-        self.return_to_global_search()
-
-    def return_to_global_search(self):
-        wd = self.app.wd
-        wd.find_element_by_link_text("Global search").click()
+        self.app.navigate.return_to_global_search()
 
     def find(self, name):
         wd = self.app.wd

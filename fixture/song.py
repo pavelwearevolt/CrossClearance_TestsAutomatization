@@ -1,5 +1,6 @@
 __author__ = 'Pavel Kosicin'
-
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 class SongHelper:
 
@@ -49,3 +50,11 @@ class SongHelper:
         wd.find_element_by_css_selector("input.form-control").send_keys(name)
         # choose found song
         wd.find_element_by_link_text(name.title()).click()
+
+    def delete(self):
+        wd = self.app.wd
+        wait = self.app.wait
+        wd.find_element_by_xpath("//div[@class='rubix-panel']//button[.='Delete Song']").click()
+        wait.until(EC.element_to_be_clickable((By.XPATH,"//div[@class='modal-footer']//button[.='Delete']"))).click()
+        wait.until(EC.title_is("CrossClearance - Global Search"))
+        #wd.find_element_by_xpath("//div[@class='modal-footer']//button[.='Delete']").click()

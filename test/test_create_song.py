@@ -1,17 +1,6 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Pavel Kosicin'
-
-
-import pytest
-from fixture.application import Application
 from model.song import Song
-
-
-@pytest.fixture
-def app(request):
-    fixture = Application()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 
 def test_create_song(app):

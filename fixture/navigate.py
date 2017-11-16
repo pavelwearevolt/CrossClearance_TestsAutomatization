@@ -10,6 +10,10 @@ class NavigateHelper:
         wd = self.app.wd
         wd.get("https://cross-auth-staging.herokuapp.com/?redirect_uri=https%3A%2F%2Fcross-edit-staging-frontend.herokuapp.com%2F")
 
-    def return_to_global_search(self):
+    def menu_global_search(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("Global search").click()
+        wd.find_element_by_name("Global search").click()
+
+    def menu_people(self):
+        wd = self.app.wd
+        wd.find_element_by_name("People").click()

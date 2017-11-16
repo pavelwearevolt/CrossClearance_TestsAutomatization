@@ -2,6 +2,7 @@ __author__ = 'Pavel Kosicin'
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
+
 class SongHelper:
 
     def __init__(self, app):
@@ -16,6 +17,11 @@ class SongHelper:
         wd.find_element_by_css_selector("button.btn.btn-green").click()
         wd.find_element_by_xpath("//div[@class='modal-body']//button[.='song']").click()
         # song modification
+        self.fill_song_form(song)
+        self.app.navigate.menu_global_search()
+
+    def fill_song_form(self, song):
+        wd = self.app.wd
         wd.find_element_by_id("song_iswc_identification_new").click()
         wd.find_element_by_id("song_iswc_identification_new").clear()
         wd.find_element_by_id("song_iswc_identification_new").send_keys(song.iswc)
@@ -40,7 +46,6 @@ class SongHelper:
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(song.note)
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
-        self.app.navigate.return_to_global_search()
 
     def find(self, name):
         wd = self.app.wd
@@ -51,10 +56,8 @@ class SongHelper:
         # choose found song
         wd.find_element_by_link_text(name.title()).click()
 
-    def delete(self):
-        wd = self.app.wd
-        wait = self.app.wait
-        wd.find_element_by_xpath("//div[@class='rubix-panel']//button[.='Delete Song']").click()
-        wait.until(EC.element_to_be_clickable((By.XPATH,"//div[@class='modal-footer']//button[.='Delete']"))).click()
-        wait.until(EC.title_is("CrossClearance - Global Search"))
-        #wd.find_element_by_xpath("//div[@class='modal-footer']//button[.='Delete']").click()
+    # def delete_song(self):
+        # wd = self.app.wd
+        # wait = self.app.wait
+        # wd.find_element_by_xpath("//div[@class='rubix-panel']//button[.='Delete Song']").click()
+        # wait.until(EC.element_to_be_clickable((By.XPATH,"//div[@class='modal-footer']//button[.='Delete']"))).click()

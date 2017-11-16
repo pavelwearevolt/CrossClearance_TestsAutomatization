@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from fixture.session import SessionHelper
 from fixture.song import SongHelper
 from fixture.navigate import NavigateHelper
-
+from fixture.songwriter import SongwriterHelper
 
 
 class Application:
@@ -16,6 +16,7 @@ class Application:
         self.session = SessionHelper(self)
         self.song = SongHelper(self)
         self.navigate = NavigateHelper(self)
+        self.songwriter = SongwriterHelper(self)
 
     def destroy(self):
         self.wd.quit()

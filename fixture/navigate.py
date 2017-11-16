@@ -8,7 +8,7 @@ class NavigateHelper:
 
     def open_home_page(self):
         wd = self.app.wd
-        wd.get("https://cross-auth-staging.herokuapp.com/?redirect_uri=https%3A%2F%2Fcross-edit-staging-frontend.herokuapp.com%2F")
+        wd.get("https://cross-edit-qa-frontend.herokuapp.com/")
 
     def menu_global_search(self):
         wd = self.app.wd

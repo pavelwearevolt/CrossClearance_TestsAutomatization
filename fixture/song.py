@@ -19,6 +19,7 @@ class SongHelper:
         # song modification
         self.fill_song_form(song)
         self.app.navigate.menu_global_search()
+        self.find(name="song_A")
 
     def fill_song_form(self, song):
         wd = self.app.wd
@@ -56,8 +57,9 @@ class SongHelper:
         # choose found song
         wd.find_element_by_link_text(name.title()).click()
 
-    # def delete_song(self):
-        # wd = self.app.wd
-        # wait = self.app.wait
-        # wd.find_element_by_xpath("//div[@class='rubix-panel']//button[.='Delete Song']").click()
-        # wait.until(EC.element_to_be_clickable((By.XPATH,"//div[@class='modal-footer']//button[.='Delete']"))).click()
+#    def delete_song(self):
+#        wd = self.app.wd
+#        wait = self.app.wait
+#        wd.find_element_by_xpath("//div[@class='rubix-panel']//button[.='Delete Song']").click()
+#        wait.until(EC.element_to_be_clickable((By.XPATH,"//div[@class='modal-footer']//button[.='Delete']"))).click()
+

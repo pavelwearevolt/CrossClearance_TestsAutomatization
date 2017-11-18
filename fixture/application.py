@@ -6,6 +6,7 @@ from fixture.song import SongHelper
 from fixture.navigate import NavigateHelper
 from fixture.songwriter import SongwriterHelper
 from fixture.artist import ArtistHelper
+from fixture.recording import RecordingHelper
 
 
 class Application:
@@ -19,6 +20,7 @@ class Application:
         self.navigate = NavigateHelper(self)
         self.songwriter = SongwriterHelper(self)
         self.artist = ArtistHelper(self)
+        self.recording = RecordingHelper(self)
 
     def destroy(self):
         self.wd.quit()

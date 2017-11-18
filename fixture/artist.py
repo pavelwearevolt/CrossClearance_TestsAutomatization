@@ -1,6 +1,7 @@
 __author__ = 'Pavel Kosicin'
 import time
 
+
 class ArtistHelper:
 
     def __init__(self, app):

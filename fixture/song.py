@@ -19,7 +19,7 @@ class SongHelper:
         # song modification
         self.fill_song_form(song)
         self.app.navigate.menu_global_search()
-        self.find(name="song_A")
+        self.app.search.global_search(name="song_A")
 
     def fill_song_form(self, song):
         wd = self.app.wd
@@ -47,15 +47,6 @@ class SongHelper:
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(song.note)
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
-
-    def find(self, name):
-        wd = self.app.wd
-        # find created song
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(name)
-        # choose found song
-        wd.find_element_by_link_text(name.title()).click()
 
 #    def delete_song(self):
 #        wd = self.app.wd

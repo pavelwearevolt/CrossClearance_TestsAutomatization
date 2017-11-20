@@ -20,18 +20,10 @@ class ArtistHelper:
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         time.sleep(3)
         self.app.navigate.menu_people()
-        self.find(name="ra_#1")
+        self.app.search.object_search(name="ra_#1")
         # add notes
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").click()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(artist.note)
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
 
-    def find(self, name):
-        wd = self.app.wd
-        # find created recording artist
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(name)
-        # choose found recording artist
-        wd.find_element_by_link_text(name).click()

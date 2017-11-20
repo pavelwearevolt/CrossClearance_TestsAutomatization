@@ -34,15 +34,8 @@ class RecordingHelper:
         # create master recording
         wd.find_element_by_xpath("//div[@class='modal-footer']//button[.='Create']").click()
         time.sleep(5)
-
-    def find(self, name):
-        wd = self.app.wd
         self.app.navigate.menu_master_recording()
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(name)
-        # choose found song
-        wd.find_element_by_link_text(name).click()
+        self.app.search.object_search(name="mr_#1")
 
     def modify(self):
         wd = self.app.wd

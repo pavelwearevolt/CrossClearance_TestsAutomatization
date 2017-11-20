@@ -8,6 +8,7 @@ from fixture.songwriter import SongwriterHelper
 from fixture.artist import ArtistHelper
 from fixture.recording import RecordingHelper
 from fixture.search import SearchHelper
+from fixture.publisher import PublisherHelper
 
 
 class Application:
@@ -23,6 +24,7 @@ class Application:
         self.artist = ArtistHelper(self)
         self.recording = RecordingHelper(self)
         self.search = SearchHelper(self)
+        self.publisher = PublisherHelper(self)
 
     def destroy(self):
         self.wd.quit()

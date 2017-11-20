@@ -9,20 +9,20 @@ class RecordingHelper:
     def __init__(self, app):
         self.app = app
 
-    def add_artist(self, name):
+    def add_artist(self):
         wd = self.app.wd
         # open master recording tab
         wd.find_element_by_xpath("//nav[@class='collapse in']/ul/li[6]/a").click()
         # find recording artist, artist name see in test_3_create_recording_artist_global_search
         wd.find_element_by_id("master_recording_search").click()
         wd.find_element_by_id("master_recording_search").clear()
-        wd.find_element_by_id("master_recording_search").send_keys(name.artist_name)
+        wd.find_element_by_id("master_recording_search").send_keys("ra_#1")
         wd.find_element_by_css_selector("p.complex-suggestion").click()
         # fill master recording create form
         # edit master recording name
         wd.find_element_by_name("masterRecordingName").click()
         wd.find_element_by_name("masterRecordingName").clear()
-        wd.find_element_by_name("masterRecordingName").send_keys(name.recording_name)
+        wd.find_element_by_name("masterRecordingName").send_keys("mr_#1")
         # edit Recording Artist role
         wd.find_element_by_id("role_select_role_clear").click()
         wd.find_element_by_id("role_select_role_item_9").click()
@@ -44,7 +44,7 @@ class RecordingHelper:
         # choose found song
         wd.find_element_by_link_text(name).click()
 
-    def modify(self, modify):
+    def modify(self):
         wd = self.app.wd
         wait = self.app.wait
         # modify recording type
@@ -54,7 +54,7 @@ class RecordingHelper:
         wd.find_element_by_xpath("//form[@class='form-horizontal']/div[4]/div/div/a").click()
         wd.find_element_by_id("master_recording_recording_version").click()
         wd.find_element_by_id("master_recording_recording_version").clear()
-        wd.find_element_by_id("master_recording_recording_version").send_keys(modify.version)
+        wd.find_element_by_id("master_recording_recording_version").send_keys("test_version")
         wd.find_element_by_id("master_recording_recording_version_save").click()
         # modify copyright date
         wd.find_element_by_xpath("//form[@class='form-horizontal']/div[5]/div/div/div/select[1]").click()
@@ -68,16 +68,16 @@ class RecordingHelper:
         # modify identificator ISRC
         wd.find_element_by_id("master_recording_isrc_identification_new").click()
         wd.find_element_by_id("master_recording_isrc_identification_new").clear()
-        wd.find_element_by_id("master_recording_isrc_identification_new").send_keys(modify.isrc)
+        wd.find_element_by_id("master_recording_isrc_identification_new").send_keys("QW-RE1-42-05634")
         wd.find_element_by_id("master_recording_isrc_identification_new_add").click()
         # modify identificator ASAP
         wd.find_element_by_id("master_recording_asap_identification_new").click()
         wd.find_element_by_id("master_recording_asap_identification_new").clear()
-        wd.find_element_by_id("master_recording_asap_identification_new").send_keys(modify.asap)
+        wd.find_element_by_id("master_recording_asap_identification_new").send_keys("D7J_W9MZ38.5BA_L")
         wd.find_element_by_id("master_recording_asap_identification_new_add").click()
         # modify note
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").click()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
-        wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(modify.note)
+        wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys("Tibi causa doloris certamine concessuros quae tua.")
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
         time.sleep(2)

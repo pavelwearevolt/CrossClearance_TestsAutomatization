@@ -16,9 +16,11 @@ class SongwriterHelper:
         wd.find_element_by_id("writing_new_search").clear()
         wd.find_element_by_id("writing_new_search").send_keys(songwriter.name)
         wd.find_element_by_id("writing_new_create").click()
+        # open edit songwriter modal window
         wd.find_element_by_link_text(songwriter.name).click()
-        # fill identifications
+        # fill fields on the edit songwriter modal window
         self.fill_fields(songwriter)
+        # click button 'Ok' on the edit songwriter modal window
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         # find created songwriter, open songwriter edit page
         self.app.navigate.menu_people()

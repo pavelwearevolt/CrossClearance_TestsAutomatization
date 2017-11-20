@@ -21,3 +21,7 @@ class NavigateHelper:
     def menu_master_recording(self):
         wd = self.app.wd
         wd.find_element_by_name("Master Recordings").click()
+
+    def menu_companies(self):
+        wd = self.app.wd
+        wd.find_element_by_name("Companies").click()

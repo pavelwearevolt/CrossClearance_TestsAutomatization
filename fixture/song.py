@@ -8,7 +8,7 @@ class SongHelper:
     def __init__(self, app):
         self.app = app
 
-    def create(self, song):
+    def create_from_global_search(self, song):
         wd = self.app.wd
         # create song
         wd.find_element_by_css_selector("input.form-control").click()
@@ -20,6 +20,20 @@ class SongHelper:
         self.fill_song_form(song)
         self.app.navigate.menu_global_search()
         self.app.search.global_search(name="song_A")
+
+    def create_from_menu_songs(self, song):
+        wd = self.app.wd
+        # navigate menu songs
+        self.app.navigate.menu_songs()
+        wd.find_element_by_css_selector("input.form-control").click()
+        wd.find_element_by_css_selector("input.form-control").clear()
+        wd.find_element_by_css_selector("input.form-control").send_keys(song.name)
+        wd.find_element_by_css_selector("button.btn.btn-green").click()
+        wd.find_element_by_css_selector("button.btn.btn-success").click()
+        # song modification
+        self.fill_song_form(song)
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="song_B")
 
     def fill_song_form(self, song):
         wd = self.app.wd
@@ -47,6 +61,9 @@ class SongHelper:
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(song.note)
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
+
+    def merge_edit_page(self):
+        wd = self.app.wd
 
 #    def delete_song(self):
 #        wd = self.app.wd

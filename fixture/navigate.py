@@ -14,6 +14,10 @@ class NavigateHelper:
         wd = self.app.wd
         wd.find_element_by_name("Global search").click()
 
+    def menu_songs(self):
+        wd = self.app.wd
+        wd.find_element_by_name("Songs").click()
+
     def menu_people(self):
         wd = self.app.wd
         wd.find_element_by_name("People").click()

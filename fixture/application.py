@@ -30,5 +30,12 @@ class Application:
         self.label = LabelHelper(self)
         self.collective = CollectiveHelper(self)
 
+    def is_valid(self):
+        try:
+            self.wd.current_url
+            return True
+        except:
+            return False
+
     def destroy(self):
         self.wd.quit()

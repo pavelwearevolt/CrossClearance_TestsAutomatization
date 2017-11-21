@@ -11,6 +11,10 @@ class RecordingHelper:
 
     def add_artist(self):
         wd = self.app.wd
+        # navigate menu global search
+        self.app.navigate.menu_global_search()
+        # find song
+        self.app.search.global_search(name="song_A")
         # open master recording tab
         wd.find_element_by_xpath("//nav[@class='collapse in']/ul/li[6]/a").click()
         # find recording artist, artist name see in test_3_create_recording_artist_global_search

@@ -9,6 +9,10 @@ class SongwriterHelper:
 
     def create_from_song(self, songwriter):
         wd = self.app.wd
+        # navigate to the global search menu
+        self.app.navigate.menu_global_search()
+        # search song
+        self.app.search.global_search(name="song_A")
         # open tab songwriter
         wd.find_element_by_link_text("Songwriters").click()
         # create songwriter

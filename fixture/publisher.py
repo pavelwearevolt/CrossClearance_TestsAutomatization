@@ -9,6 +9,8 @@ class PublisherHelper:
 
     def create_from_song(self, publisher):
         wd = self.app.wd
+        # navigate to the menu global search
+        self.app.navigate.menu_global_search()
         # find song
         self.app.search.global_search(name="song_A")
         # open tab publishers

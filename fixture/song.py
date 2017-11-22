@@ -1,6 +1,7 @@
 __author__ = 'Pavel Kosicin'
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+import time
 
 
 class SongHelper:
@@ -62,8 +63,24 @@ class SongHelper:
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(song.note)
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
 
-    def merge_edit_page(self):
+    def merge(self):
         wd = self.app.wd
+        # navigate to the global search
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="song_A")
+        # click button merge song
+        wd.find_element_by_css_selector("button.btn-outlined.btn.btn-warning").click()
+        # find second song for merge
+        wd.find_element_by_xpath("//div[@class='col-md-3']/form/div[2]/div/input").click()
+        wd.find_element_by_xpath("//div[@class='col-md-3']/form/div[2]/div/input").clear()
+        wd.find_element_by_xpath("//div[@class='col-md-3']/form/div[2]/div/input").send_keys("Song_B")
+        wd.find_element_by_xpath("//div[@class='col-md-3']/form/div[3]/div").click()
+        time.sleep()
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/div[2]/button[1]").click()
+        time.sleep(3)
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/div[1]/form/div[2]/div/div/div/a").click()
+        time.sleep(30)
+        wd.refresh()
 
 #    def delete_song(self):
 #        wd = self.app.wd

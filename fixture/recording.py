@@ -38,8 +38,8 @@ class RecordingHelper:
         # create master recording
         wd.find_element_by_xpath("//div[@class='modal-footer']//button[.='Create']").click()
         time.sleep(5)
-        self.app.navigate.menu_master_recording()
-        self.app.search.object_search(name="mr_#1")
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="mr_#1")
 
     def modify(self):
         wd = self.app.wd

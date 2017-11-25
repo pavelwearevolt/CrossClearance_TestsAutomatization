@@ -22,8 +22,8 @@ class CollectiveHelper:
         # fill form on the CopyrightCollective modal window
         self.fill_form()
         # find created collective
-        self.app.navigate.menu_companies()
-        self.app.search.object_search(name="cc_#1")
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="cc_#1")
         # add notes
         self.add_notes(collective)
 

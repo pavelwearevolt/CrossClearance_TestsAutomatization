@@ -20,8 +20,8 @@ class ArtistHelper:
         # select type
         self.type()
         # find created artist
-        self.app.navigate.menu_people()
-        self.app.search.object_search(name="ra_#1")
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="ra_#1")
         # add notes
         self.add_notes(artist)
 

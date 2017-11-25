@@ -19,8 +19,8 @@ class LabelHelper:
         # select type
         self.type()
         # find created songwriter
-        self.app.navigate.menu_companies()
-        self.app.search.object_search(name="rl_#1")
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="rl_#1")
         # fill fields on the publisher edit page
         self.fill_fields_pulisher_edit_page(label)
         # add notes

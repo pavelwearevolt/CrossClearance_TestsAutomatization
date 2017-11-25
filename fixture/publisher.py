@@ -27,8 +27,8 @@ class PublisherHelper:
         # click button 'Ok' on the publisher modal window
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         # find created publisher, open publisher edit page
-        self.app.navigate.menu_companies()
-        self.app.search.object_search(name="pb_#1")
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="pb_#1")
         # add notes
         self.add_notes(publisher)
 
@@ -45,8 +45,8 @@ class PublisherHelper:
         # select type
         self.type()
         # find created songwriter
-        self.app.navigate.menu_companies()
-        self.app.search.object_search(name="pb_#2")
+        self.app.navigate.menu_global_search()
+        self.app.search.global_search(name="pb_#2")
         # fill fields on the publisher edit page
         self.fill_fields_pulisher_edit_page(publisher)
         # add notes

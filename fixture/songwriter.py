@@ -12,7 +12,7 @@ class SongwriterHelper:
         # navigate to the global search menu
         self.app.navigate.menu_global_search()
         # search song
-        self.app.search.global_search(name="song_A")
+        self.app.search.find_entity(query="song_A")
         # open tab songwriter
         wd.find_element_by_link_text("Songwriters").click()
         # create songwriter
@@ -28,7 +28,7 @@ class SongwriterHelper:
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         # find created songwriter, open songwriter edit page
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="sw_#1")
+        self.app.search.find_entity(query="sw_#1")
         # add notes
         self.add_notes(songwriter)
 
@@ -46,7 +46,7 @@ class SongwriterHelper:
         self.type()
         # find created songwriter
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="sw_#2")
+        self.app.search.find_entity(query="sw_#2")
         # fill fields on the songwriter edit page
         self.fill_fields(songwriter)
         # add notes
@@ -66,7 +66,7 @@ class SongwriterHelper:
         self.type()
         # find created songwriter
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="sw_#3")
+        self.app.search.find_entity(query="sw_#3")
         # fill fields on the songwriter edit page
         self.fill_fields(songwriter)
         # add notes

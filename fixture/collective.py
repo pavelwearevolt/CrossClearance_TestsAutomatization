@@ -23,7 +23,7 @@ class CollectiveHelper:
         self.fill_form()
         # find created collective
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="cc_#1")
+        self.app.search.find_entity(query="cc_#1")
         # add notes
         self.add_notes(collective)
 
@@ -43,7 +43,7 @@ class CollectiveHelper:
         self.fill_form()
         # find created collective
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="cc_#2")
+        self.app.search.find_entity(query="cc_#2")
         # add notes
         self.add_notes(collective)
 

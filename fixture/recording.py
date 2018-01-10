@@ -14,7 +14,7 @@ class RecordingHelper:
         # navigate menu global search
         self.app.navigate.menu_global_search()
         # find song
-        self.app.search.global_search(name="song_A")
+        self.app.search.find_entity(query="song_A")
         # open master recording tab
         wd.find_element_by_xpath("//nav[@class='collapse in']/ul/li[6]/a").click()
         # find recording artist, artist name see in test_3_create_recording_artist_global_search
@@ -39,7 +39,7 @@ class RecordingHelper:
         wd.find_element_by_xpath("//div[@class='modal-footer']//button[.='Create']").click()
         time.sleep(5)
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="mr_#1")
+        self.app.search.find_entity(query="mr_#1")
 
     def modify(self):
         wd = self.app.wd

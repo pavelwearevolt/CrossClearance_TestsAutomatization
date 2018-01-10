@@ -20,7 +20,7 @@ class LabelHelper:
         self.type()
         # find created songwriter
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="rl_#1")
+        self.app.search.find_entity(query="rl_#1")
         # fill fields on the publisher edit page
         self.fill_fields_pulisher_edit_page(label)
         # add notes
@@ -40,7 +40,7 @@ class LabelHelper:
         self.type()
         # find created songwriter
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="rl_#2")
+        self.app.search.find_entity(query="rl_#2")
         # fill fields on the songwriter edit page
         self.fill_fields_pulisher_edit_page(label)
         # add notes

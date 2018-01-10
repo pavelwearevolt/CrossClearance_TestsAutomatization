@@ -20,21 +20,7 @@ class SongHelper:
         # song modification
         self.fill_song_form(song)
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="song_A")
-
-    def create_from_menu_songs(self, song):
-        wd = self.app.wd
-        # navigate menu songs
-        self.app.navigate.menu_songs()
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(song.name)
-        wd.find_element_by_css_selector("button.btn.btn-green").click()
-        wd.find_element_by_css_selector("button.btn.btn-success").click()
-        # song modification
-        self.fill_song_form(song)
-        self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="song_B")
+        self.app.search.find_entity(query="song_A")
 
     def fill_song_form(self, song):
         wd = self.app.wd
@@ -67,7 +53,7 @@ class SongHelper:
         wd = self.app.wd
         # navigate to the global search
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="song_A")
+        self.app.search.find_entity(query="song_A")
         # click button merge song
         wd.find_element_by_css_selector("button.btn-outlined.btn.btn-warning").click()
         # find second song for merge
@@ -75,7 +61,7 @@ class SongHelper:
         wd.find_element_by_xpath("//div[@class='col-md-3']/form/div[2]/div/input").clear()
         wd.find_element_by_xpath("//div[@class='col-md-3']/form/div[2]/div/input").send_keys("Song_B")
         wd.find_element_by_xpath("//div[@class='col-md-3']/form/div[3]/div").click()
-        time.sleep()
+        time.sleep(5)
         wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/div[2]/button[1]").click()
         time.sleep(3)
         wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/div[1]/form/div[2]/div/div/div/a").click()

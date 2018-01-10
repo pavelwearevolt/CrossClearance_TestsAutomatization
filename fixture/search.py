@@ -6,16 +6,17 @@ class SearchHelper:
     def __init__(self, app):
         self.app = app
 
-    def global_search(self, name):
+    def search_query(self, query):
         wd = self.app.wd
         wd.find_element_by_css_selector("input.form-control").click()
         wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(name)
-        wd.find_element_by_link_text(name.title()).click()
+        wd.find_element_by_css_selector("input.form-control").send_keys(query)
 
-    def object_search(self, name):
+    def find_entity(self, query):
         wd = self.app.wd
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(name)
-        wd.find_element_by_link_text(name).click()
+        self.search_query(query)
+        wd.find_element_by_link_text(query.title()).click()
+
+    def check_search_result(self):
+        self.search_query(query="all")
+

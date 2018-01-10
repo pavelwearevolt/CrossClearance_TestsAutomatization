@@ -21,7 +21,7 @@ class ArtistHelper:
         self.type()
         # find created artist
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="ra_#1")
+        self.app.search.find_entity(query="ra_#1")
         # add notes
         self.add_notes(artist)
 
@@ -39,7 +39,7 @@ class ArtistHelper:
         self.type()
         # find created artist
         self.app.navigate.menu_global_search()
-        self.app.search.global_search(name="ra_#2")
+        self.app.search.find_entity(query="ra_#2")
         # add notes
         self.add_notes(artist)
 

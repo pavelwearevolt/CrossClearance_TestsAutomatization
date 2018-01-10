@@ -19,8 +19,6 @@ class SongHelper:
         wd.find_element_by_xpath("//div[@class='modal-body']//button[.='song']").click()
         # song modification
         self.fill_song_form(song)
-        self.app.navigate.menu_global_search()
-        self.app.search.find_entity(query="song_A")
 
     def fill_song_form(self, song):
         wd = self.app.wd
@@ -51,9 +49,7 @@ class SongHelper:
 
     def merge(self):
         wd = self.app.wd
-        # navigate to the global search
-        self.app.navigate.menu_global_search()
-        self.app.search.find_entity(query="song_A")
+        self.search_created_song()
         # click button merge song
         wd.find_element_by_css_selector("button.btn-outlined.btn.btn-warning").click()
         # find second song for merge
@@ -67,6 +63,17 @@ class SongHelper:
         wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/div[1]/form/div[2]/div/div/div/a").click()
         time.sleep(30)
         wd.refresh()
+
+    def search_created_song(self):
+        # navigate to the global search
+        self.app.navigate.menu_global_search()
+        self.app.search.find_entity(query="song_A")
+
+    def check_cross_id(self):
+        wd = self.app.wd
+        # find cross id
+        cross_id = wd.find_element_by_css_selector(".form-horizontal>div:nth-child(3)>div:nth-child(2)>div:nth-child(2)>span:nth-child(1)>li:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a:nth-child(1)").text
+        assert cross_id.startswith('CCSN')
 
 #    def delete_song(self):
 #        wd = self.app.wd

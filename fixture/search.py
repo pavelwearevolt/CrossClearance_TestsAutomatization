@@ -17,6 +17,3 @@ class SearchHelper:
         self.search_query(query)
         wd.find_element_by_link_text(query.title()).click()
 
-    def check_search_result(self):
-        self.search_query(query="all")
-

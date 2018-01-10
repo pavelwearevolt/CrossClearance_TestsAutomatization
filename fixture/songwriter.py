@@ -52,26 +52,6 @@ class SongwriterHelper:
         # add notes
         self.add_notes(songwriter)
 
-    def create_menu_people(self, songwriter):
-        wd = self.app.wd
-        # navigate menu people
-        self.app.navigate.menu_people()
-        # create songwriter
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(songwriter.name)
-        wd.find_element_by_css_selector("button.btn.btn-green").click()
-        wd.find_element_by_css_selector("button.btn.btn-success").click()
-        # select person type
-        self.type()
-        # find created songwriter
-        self.app.navigate.menu_global_search()
-        self.app.search.find_entity(query="sw_#3")
-        # fill fields on the songwriter edit page
-        self.fill_fields(songwriter)
-        # add notes
-        self.add_notes(songwriter)
-
     def type(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//form[@class='form-horizontal']/div[3]/div/div[1]/div/button").click()

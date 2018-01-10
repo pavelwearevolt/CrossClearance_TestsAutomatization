@@ -7,7 +7,7 @@ class CollectiveHelper:
     def __init__(self, app):
         self.app = app
 
-    def create_from_menu_global_search(self, collective):
+    def create_copyright_collective(self, collective):
         wd = self.app.wd
         # navigate menu global search
         self.app.navigate.menu_global_search()
@@ -24,26 +24,6 @@ class CollectiveHelper:
         # find created collective
         self.app.navigate.menu_global_search()
         self.app.search.find_entity(query="cc_#1")
-        # add notes
-        self.add_notes(collective)
-
-    def create_from_menu_companies(self, collective):
-        wd = self.app.wd
-        # navigate menu companies
-        self.app.navigate.menu_companies()
-        # create collective
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(collective.name)
-        wd.find_element_by_css_selector("button.btn.btn-green").click()
-        wd.find_element_by_css_selector("button.btn.btn-success").click()
-        # select type
-        self.type()
-        # fill form on the CopyrightCollective modal window
-        self.fill_form()
-        # find created collective
-        self.app.navigate.menu_global_search()
-        self.app.search.find_entity(query="cc_#2")
         # add notes
         self.add_notes(collective)
 

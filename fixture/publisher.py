@@ -48,27 +48,7 @@ class PublisherHelper:
         self.app.navigate.menu_global_search()
         self.app.search.find_entity(query="pb_#2")
         # fill fields on the publisher edit page
-        self.fill_fields_pulisher_edit_page(publisher)
-        # add notes
-        self.add_notes(publisher)
-
-    def create_from_menu_companies(self, publisher):
-        wd = self.app.wd
-        # navigate menu companies
-        self.app.navigate.menu_companies()
-        # create publisher
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(publisher.name)
-        wd.find_element_by_css_selector("button.btn.btn-green").click()
-        wd.find_element_by_css_selector("button.btn.btn-success").click()
-        # select person type
-        self.type()
-        # find created songwriter
-        self.app.navigate.menu_global_search()
-        self.app.search.find_entity(query="pb_#3")
-        # fill fields on the songwriter edit page
-        self.fill_fields_pulisher_edit_page(publisher)
+        self.fill_fields_publisher_edit_page(publisher)
         # add notes
         self.add_notes(publisher)
 
@@ -83,7 +63,7 @@ class PublisherHelper:
         wd.find_element_by_id("publisher_asap_identification_new").send_keys(publisher.asap)
         wd.find_element_by_id("publisher_asap_identification_new_add").click()
 
-    def fill_fields_pulisher_edit_page(self, publisher):
+    def fill_fields_publisher_edit_page(self, publisher):
         wd = self.app.wd
         # fill ipicae
         wd.find_element_by_xpath("//form[@class='form-horizontal']/div[4]/div[1]/div/div[1]/input").click()

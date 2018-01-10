@@ -9,7 +9,7 @@ class SongHelper:
     def __init__(self, app):
         self.app = app
 
-    def create_from_global_search(self, song):
+    def create_song(self, song):
         wd = self.app.wd
         # create song
         wd.find_element_by_css_selector("input.form-control").click()

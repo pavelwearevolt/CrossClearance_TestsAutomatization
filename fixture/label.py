@@ -6,7 +6,7 @@ class LabelHelper:
     def __init__(self, app):
         self.app = app
 
-    def create_from_menu_global_search(self, label):
+    def create_record_label(self, label):
         wd = self.app.wd
         # navigate menu global search
         self.app.navigate.menu_global_search()
@@ -22,31 +22,11 @@ class LabelHelper:
         self.app.navigate.menu_global_search()
         self.app.search.find_entity(query="rl_#1")
         # fill fields on the publisher edit page
-        self.fill_fields_pulisher_edit_page(label)
+        self.fill_fields_record_label_edit_page(label)
         # add notes
         self.add_notes(label)
 
-    def create_from_menu_companies(self, label):
-        wd = self.app.wd
-        # navigate menu companies
-        self.app.navigate.menu_companies()
-        # create publisher
-        wd.find_element_by_css_selector("input.form-control").click()
-        wd.find_element_by_css_selector("input.form-control").clear()
-        wd.find_element_by_css_selector("input.form-control").send_keys(label.name)
-        wd.find_element_by_css_selector("button.btn.btn-green").click()
-        wd.find_element_by_css_selector("button.btn.btn-success").click()
-        # select person type
-        self.type()
-        # find created songwriter
-        self.app.navigate.menu_global_search()
-        self.app.search.find_entity(query="rl_#2")
-        # fill fields on the songwriter edit page
-        self.fill_fields_pulisher_edit_page(label)
-        # add notes
-        self.add_notes(label)
-
-    def fill_fields_pulisher_edit_page(self, label):
+    def fill_fields_record_label_edit_page(self, label):
         wd = self.app.wd
         # fill asap
         wd.find_element_by_xpath("//form[@class='form-horizontal']/div[4]/div[1]/div/div[1]/input").click()

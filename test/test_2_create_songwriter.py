@@ -7,5 +7,3 @@ def test_create_songwriter(app):
         note="Quis non intelligere sua praeterita, coactus sum iterum vivendo experiatur."))
     app.songwriter.create_menu_global_search(Songwriter(name="sw_#2", ipicae="B-182570603-6", asap="QW5E-X07EW.84H9S-0",
         note="Noli olim somniamus futurorum praesentia mentem rede"))
-    app.songwriter.create_menu_people(Songwriter(name="sw_#3", ipicae="J-500263847-8", asap="ZF6K-6Q103I.52P9C-I",
-        note="Furor iraque peribunt cogitationes ubi oblivionis."))

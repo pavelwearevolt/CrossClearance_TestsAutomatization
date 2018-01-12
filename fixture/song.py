@@ -72,7 +72,12 @@ class SongHelper:
     def check_cross_id(self):
         wd = self.app.wd
         # find cross id
-        cross_id = wd.find_element_by_css_selector(".form-horizontal>div:nth-child(3)>div:nth-child(2)>div:nth-child(2)>span:nth-child(1)>li:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a:nth-child(1)").text
+        cross_id = wd.find_element_by_css_selector("div.list-group:nth-child(1)>span:nth-child(1)>li:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1)").text
+        # check for ambiguous symbols
+        ambiguous_symbols = ['0', '1', 'I', 'i', 'L', 'l', 'O', 'o']
+        for symbol in ambiguous_symbols:
+            assert symbol not in cross_id[4:], "A restricted symbol found - \"%s\"" % symbol
+        # check prefix of cross id
         assert cross_id.startswith('CCSN')
 
 #    def delete_song(self):

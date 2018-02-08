@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__author__ = 'Pavel Kosicin'
+__author__ = 'pavelkosicin'
 from model.song import Song
 
 

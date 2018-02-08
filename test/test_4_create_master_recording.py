@@ -1,4 +1,4 @@
-__author__ = 'Pavel Kosicin'
+__author__ = 'pavelkosicin'
 
 
 def test_create_master_recording(app):

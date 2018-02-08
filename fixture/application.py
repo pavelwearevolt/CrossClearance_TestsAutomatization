@@ -1,4 +1,4 @@
-__author__ = 'Pavel Kosicin'
+__author__ = 'pavelkosicin'
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 from fixture.session import SessionHelper

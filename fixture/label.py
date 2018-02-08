@@ -1,4 +1,4 @@
-__author__ = 'Pavel Kosicin'
+__author__ = 'pavelkosicin'
 import time
 
 class LabelHelper:

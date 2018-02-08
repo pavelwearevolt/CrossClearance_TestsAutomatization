@@ -1,4 +1,4 @@
-__author__ = 'Pavel Kosicin'
+__author__ = 'pavelkosicin'
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time

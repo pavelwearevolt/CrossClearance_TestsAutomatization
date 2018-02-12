@@ -16,4 +16,3 @@ class SearchHelper:
         wd = self.app.wd
         self.search_query(query)
         wd.find_element_by_link_text(query.title()).click()
-

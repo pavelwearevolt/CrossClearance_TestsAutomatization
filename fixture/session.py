@@ -1,4 +1,7 @@
 __author__ = 'pavelkosicin'
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+
 
 
 class SessionHelper:
@@ -19,5 +22,6 @@ class SessionHelper:
 
     def logout(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//nav[@id='rubix-nav-header']/div/div/div[3]/div/ul/li[7]/a/span").click()
+        wait = self.app.wait
+        wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "logout"))).click()
         wd.find_element_by_css_selector("button.btn.btn-success").click()

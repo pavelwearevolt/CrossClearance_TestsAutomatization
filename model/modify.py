@@ -1,9 +1,9 @@
 __author__ = 'pavelkosicin'
 
 
-class Song:
+class Modify:
 
-    def __init__(self, name, iswc, asap, ascap, bmi, sesac, note):
+    def __init__(self, name=None, iswc=None, asap=None, ascap=None, bmi=None, sesac=None, note=None):
         self.name = name
         self.iswc = iswc
         self.asap = asap

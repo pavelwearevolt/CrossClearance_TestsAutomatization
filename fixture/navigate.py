@@ -13,3 +13,7 @@ class NavigateHelper:
     def menu_global_search(self):
         wd = self.app.wd
         wd.find_element_by_name("Global search").click()
+
+    def tab_songwriters(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("Songwriters").click()

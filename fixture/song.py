@@ -93,35 +93,46 @@ class SongHelper:
     def edit_data(self, data):
         wd = self.app.wd
         # edit song name
-        wd.find_element_by_xpath("//form[@class='form-horizontal']/div[2]/div/div[2]/span/li[2]/div[2]/div/div[1]/a").click()
+        wd.find_element_by_xpath(self.name_locator("2")).click()
         self.check_cancel_button("song_name_edit")
+        wd.find_element_by_xpath(self.name_locator("2")).click()
         self.change_data_value("song_name_edit", data.name)
         # edit iswc
-        wd.find_element_by_xpath("//form[@class='form-horizontal']/div[4]/div/div[2]/span/li/div[2]/div/div[1]/div/a").click()
+        wd.find_element_by_xpath(self.identifier_locator("4")).click()
         self.check_cancel_button("song_iswc_identification_edit")
+        wd.find_element_by_xpath(self.identifier_locator("4")).click()
         self.change_data_value("song_iswc_identification_edit", data.iswc)
         # edit asap
-        wd.find_element_by_xpath("//form[@class='form-horizontal']/div[5]/div/div[2]/span/li/div[2]/div/div[1]/div/a").click()
+        wd.find_element_by_xpath(self.identifier_locator("5")).click()
         self.check_cancel_button("song_asap_identification_edit")
-        self.change_data_value("song_asap_identification_edit", data.iswc)
+        wd.find_element_by_xpath(self.identifier_locator("5")).click()
+        self.change_data_value("song_asap_identification_edit", data.asap)
         # edit ascap
-        wd.find_element_by_xpath("//form[@class='form-horizontal']/div[6]/div/div[2]/span/li/div[2]/div/div[1]/div/a").click()
+        wd.find_element_by_xpath(self.identifier_locator("6")).click()
         self.check_cancel_button("song_ascap_identification_edit")
-        self.change_data_value("song_ascap_identification_edit", data.iswc)
+        wd.find_element_by_xpath(self.identifier_locator("6")).click()
+        self.change_data_value("song_ascap_identification_edit", data.ascap)
         # edit bmi
-        wd.find_element_by_xpath("//form[@class='form-horizontal']/div[7]/div/div[2]/span/li/div[2]/div/div[1]/div/a").click()
+        wd.find_element_by_xpath(self.identifier_locator("7")).click()
         self.check_cancel_button("song_bmi_identification_edit")
-        self.change_data_value("song_bmi_identification_edit", data.iswc)
+        wd.find_element_by_xpath(self.identifier_locator("7")).click()
+        self.change_data_value("song_bmi_identification_edit", data.bmi)
         # edit sesac
-        wd.find_element_by_xpath("//form[@class='form-horizontal']/div[8]/div/div[2]/span/li/div[2]/div/div[1]/div/a").click()
+        wd.find_element_by_xpath(self.identifier_locator("8")).click()
         self.check_cancel_button("song_sesac_identification_edit")
-        self.change_data_value("song_sesac_identification_edit", data.iswc)
+        wd.find_element_by_xpath(self.identifier_locator("8")).click()
+        self.change_data_value("song_sesac_identification_edit", data.sesac)
         # edit note
-        #wd.find_element_by_xpath("//form[@class='form-horizontal']/div[4]/div/div[2]/span/li/div[2]/div/div[1]/div/a").click()
-        #self.check_cancel_button("song_iswc_identification_edit")
-        #self.change_data_value("song_iswc_identification_edit", data.iswc)
 
+    def identifier_locator(self, div_number):
+        # подстановка в %s нового знаения
+        locator = "//form[@class='form-horizontal']/div[%s]/div/div[2]/span/li/div[2]/div[1]/div[1]/div/a"
+        return locator % (div_number)
 
+    def name_locator(self, div_number):
+        # подстановка в %s нового знаения
+        locator = "//form[@class='form-horizontal']/div[%s]/div/div[2]/span/li[2]/div[2]/div/div[1]/a"
+        return locator % (div_number)
 
 
 #    def delete_song(self):

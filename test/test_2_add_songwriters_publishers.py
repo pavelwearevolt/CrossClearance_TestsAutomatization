@@ -13,5 +13,5 @@ def test_check_empty_tab_songwriters(app):
     app.songwriter.check_alert_info(alert_text="There is not one Songwriter for this song")
 
 
-def create_songwriter_in_the_song(app):
+def create_songwriter_in_song(app):
     app.songwrier.create_from_song(name="person_songwriter_#1")

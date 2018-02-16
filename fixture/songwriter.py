@@ -7,19 +7,6 @@ class SongwriterHelper:
     def __init__(self, app):
         self.app = app
 
-    def check_alert_info(self, alert_text):
-        wd = self.app.wd
-        element = wd.find_element_by_class_name("alert.alert-info").text
-        assert element == alert_text, "Wrong alert text or songwriters tab is not empty"
-
-    def create_from_song(self, name):
-        wd = self.app.wd
-        # create songwriter
-        wd.find_element_by_id("writing_new_search").click()
-        wd.find_element_by_id("writing_new_search").clear()
-        wd.find_element_by_id("writing_new_search").send_keys(name)
-        wd.find_element_by_id("writing_new_create").click()
-
     def create_menu_global_search(self, songwriter):
         wd = self.app.wd
         # navigate menu global search
@@ -46,6 +33,8 @@ class SongwriterHelper:
         wd.find_element_by_xpath("//form[@class='form-horizontal']/div[3]/div/div[1]/div/ul/li[1]").click()
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         time.sleep(3)
+
+
 
     def fill_fields(self, songwriter):
         wd = self.app.wd

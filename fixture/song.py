@@ -27,22 +27,18 @@ class SongHelper:
             wd.find_element_by_id(field_name + "_add").click()
 
     def fill_song_form(self, data):
-        wd = self.app.wd
         # add identifiers
         self.identifiers_field_value("song_iswc_identification_new", data.iswc)
-        wd.find_element_by_id("song_iswc_identification_new_add").click()
         self.identifiers_field_value("song_asap_identification_new", data.asap)
-        wd.find_element_by_id("song_asap_identification_new_add").click()
         self.identifiers_field_value("song_ascap_identification_new", data.ascap)
-        wd.find_element_by_id("song_ascap_identification_new_add").click()
         self.identifiers_field_value("song_bmi_identification_new", data.bmi)
-        wd.find_element_by_id("song_bmi_identification_new_add").click()
         self.identifiers_field_value("song_sesac_identification_new", data.sesac)
-        wd.find_element_by_id("song_sesac_identification_new_add").click()
-        # add note
+
+    def add_note(self, text):
+        wd = self.app.wd
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").click()
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").clear()
-        wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(data.note)
+        wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").send_keys(text.note)
         wd.find_element_by_xpath("//div[@class='_30d-pYB2dYPjd0XNrEQjVs']//button[.='Send']").click()
 
     def search_song(self, query):
@@ -92,8 +88,9 @@ class SongHelper:
 
     def edit_song_info(self, new_data):
         wd = self.app.wd
-        locator_path_name = "//form[@class='form-horizontal']/div[%s]/div/div[2]/span/li[2]/div[2]/div/div[1]/a"
+        locator_path_name = "//form[@class='form-horizontal']/div[2]/div/div[2]/span/li[%s]/div[2]/div/div[1]/a"
         locator_path_identifier = "//form[@class='form-horizontal']/div[%s]/div/div[2]/span/li/div[2]/div[1]/div[1]/div/a"
+        time.sleep(2)
         # edit song name
         wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
         self.check_cancel_button("song_name_edit")
@@ -133,11 +130,13 @@ class SongHelper:
 
     def add_entity_link(self, name, text):
         wd = self.app.wd
+        wait = self.app.wait
         # метод для добавления сущности в песню (songwriter or publisher)
         wd.find_element_by_id(self.app.locator.add_entity_link(text)).click()
         wd.find_element_by_id(self.app.locator.add_entity_link(text)).clear()
         wd.find_element_by_id(self.app.locator.add_entity_link(text)).send_keys(name)
         wd.find_element_by_id(self.app.locator.add_entity_link_create_button(text)).click()
+        wait.until(EC.presence_of_element_located((By.LINK_TEXT, name)))
 
     def open_edit_entity_modal_window(self):
         # open edit songwriter modal window in the edit song page
@@ -167,15 +166,21 @@ class SongHelper:
         wd.find_element_by_id("writing_select_role_item_1").click()
         wd.find_element_by_id("writing_select_role_item_2").click()
 
-
     def fill_identifiers_fields_in_edit_songwriter_modal_window(self, data):
         self.identifiers_field_value("songwriter_ipicae_identification_new", data.ipicae)
         self.identifiers_field_value("songwriter_asap_identification_new", data.asap)
 
     def edit_sonwriter_info_in_modal_window(self, new_data):
         wd = self.app.wd
+        wait = self.app.wait
+        # xpath
         locator_path_name = "//div[@class='form-group']/div/div/div[2]/li[%s]/div[2]/div[1]/a"
         locator_path_identifier = "//div[@class='form-group']/div[%s]/div/div[2]/span/li/div[2]/div/div[1]/div/a"
+
+        wait.until(EC.presence_of_element_located((By.XPATH, self.app.locator.edit_identifier(locator_path_identifier,
+                                                                                              div_number="2"))))
+        wait.until(EC.presence_of_element_located((By.XPATH, self.app.locator.edit_identifier(locator_path_identifier,
+                                                                                              div_number="3"))))
         # edit song name
         wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
         self.check_cancel_button("writing_name_edit")
@@ -193,14 +198,8 @@ class SongHelper:
         self.change_data_value("songwriter_asap_identification_edit", new_data.asap)
         wd.find_element_by_class_name("btn.btn-success").click()
 
-
-
-
-
-
 #    def delete_song(self):
 #        wd = self.app.wd
 #        wait = self.app.wait
 #        wd.find_element_by_xpath("//div[@class='rubix-panel']//button[.='Delete Song']").click()
 #        wait.until(EC.element_to_be_clickable((By.XPATH,"//div[@class='modal-footer']//button[.='Delete']"))).click()
-

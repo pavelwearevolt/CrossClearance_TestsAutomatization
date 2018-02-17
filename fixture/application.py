@@ -11,6 +11,7 @@ from fixture.search import SearchHelper
 from fixture.publisher import PublisherHelper
 from fixture.label import LabelHelper
 from fixture.collective import CollectiveHelper
+from fixture.locator import LocatorHelper
 
 
 class Application:
@@ -29,6 +30,7 @@ class Application:
         self.publisher = PublisherHelper(self)
         self.label = LabelHelper(self)
         self.collective = CollectiveHelper(self)
+        self.locator = LocatorHelper(self)
 
     def is_valid(self):
         try:

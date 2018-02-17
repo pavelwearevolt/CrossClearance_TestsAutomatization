@@ -169,7 +169,7 @@ class SongHelper:
         wd = self.app.wd
         wd.find_element_by_class_name("close").click()
 
-    def check_songwriter_role(self, role_1, role_2):
+    def check_songwriter_default_role(self, role_1, role_2):
         wd = self.app.wd
         role_list = []
         elements = wd.find_elements_by_class_name("Select-item-label")
@@ -177,6 +177,16 @@ class SongHelper:
             if element.text == role_1 or element.text == role_2:
                 role_list.append(element.text)
         assert len(role_list) == 2
+
+    def edit_songwriter_roles(self):
+        wd = self.app.wd
+        wd.find_element_by_class_name("Select-arrow").click()
+        wd.find_element_by_id("writing_select_role_item_3").click()
+        wd.find_element_by_id("writing_select_role_item_12").click()
+        wd.find_element_by_id("writing_select_role_clear").click()
+        wd.find_element_by_id("writing_select_role_item_1").click()
+        wd.find_element_by_id("writing_select_role_item_2").click()
+
 
     def fill_identifiers_fields_in_edit_songwriter_modal_window(self, data):
         self.identifiers_field_value("songwriter_ipicae_identification_new", data.ipicae)

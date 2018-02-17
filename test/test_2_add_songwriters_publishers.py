@@ -19,10 +19,15 @@ def test_edit_songwriter_in_song(app):
     app.song.check_cross_id(locator_path="div._15tqGvIentb7leltuBfTAA>div>div.col-xs-9>div", prefix='CCSW')
     app.song.add_secondary_name(new_name="new_name_person_songwriter_#1", text="writing")
     app.song.edit_songwriter_roles()
-    app.song.fill_identifiers_fields_in_edit_songwriter_modal_window(Songwriter(ipicae="G-332947321-0",
-                                                                               asap="4443588649923"))
-    app.song.edit_sonwriter_info_in_modal_window(Songwriter(name="edited_name_person_songwriter_#1", ipicae="T-332947321-2",
-                                                            asap="4443588649922"))
+    app.song.fill_identifiers_fields_in_edit_songwriter_modal_window(Songwriter(
+        ipicae="G-332947321-0",
+        asap="4443588649923"
+        ))
+    app.song.edit_sonwriter_info_in_modal_window(Songwriter(
+        name="edited_name_person_songwriter_#1",
+        ipicae="T-332947321-2",
+        asap="4443588649922"
+        ))
 
 
 def test_create_publisher_in_song(app):

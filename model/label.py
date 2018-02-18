@@ -3,7 +3,7 @@ __author__ = 'pavelkosicin'
 
 class Label:
 
-    def __init__(self, name, asap, note):
+    def __init__(self, name, asap):
         self.name = name
         self.asap = asap
-        self.note = note
+

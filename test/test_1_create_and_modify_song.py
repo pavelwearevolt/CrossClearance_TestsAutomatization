@@ -13,51 +13,21 @@ def test_search_song(app):
     app.song.search_song(query="song_A")
 
 
-def test_switch_to_tab_songwriters(app):
-    app.navigate.tab_songwriters()
-
-
-def test_check_empty_tab_songwriters(app):
+def test_check_empty_tabs(app):
+    app.navigate.switch_to_tab(tab_name="Songwriters")
     app.song.check_alert_info(alert_text="There is not one Songwriter for this song")
-
-
-def test_switch_to_tab_publishers(app):
-    app.navigate.tab_publishers()
-
-
-def test_check_empty_tab_publishers(app):
+    app.navigate.switch_to_tab(tab_name="Publishers")
     app.song.check_alert_info(alert_text="There is not one Publisher for this song")
-
-
-def test_switch_to_tab_directives(app):
-    app.navigate.tab_directives()
-
-
-def test_check_empty_tab_directives(app):
+    app.navigate.switch_to_tab(tab_name="Directives")
     app.song.check_alert_info(alert_text="There is not deals between Songwriter and Publishers for this song.")
-
-
-def test_switch_to_tab_copyrigt_collective_info(app):
-    app.navigate.tab_copyrigt_collective_info()
-
-
-def test_check_empty_tab_copyrigt_collective_info(app):
+    app.navigate.switch_to_tab(tab_name="Copyright Collective Info")
     app.song.check_alert_info(alert_text="Copyright collective info not found.")
-
-
-def test_switch_to_tab_master_recordings(app):
-    app.navigate.tab_master_recordings()
-
-
-def test_check_empty_tab_master_recordings(app):
+    app.navigate.switch_to_tab(tab_name="Master Recordings")
     app.song.check_alert_info(alert_text="There are not Master Recordings associated for this song.")
 
 
-def test_switch_to_tab_general_info(app):
-    app.navigate.tab_general_info()
-
-
 def test_modify_song_general(app):
+    app.navigate.switch_to_tab(tab_name="General Info")
     app.song.fill_song_form(Modify(
         iswc="T-553.682.543-1",
         asap="8554215642",

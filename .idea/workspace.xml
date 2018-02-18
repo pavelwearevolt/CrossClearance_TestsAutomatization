@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f13e953-40a0-4037-905e-1c243ce3e100" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/fixture/navigate.py" afterPath="$PROJECT_DIR$/fixture/navigate.py" />
       <change beforePath="$PROJECT_DIR$/fixture/song.py" afterPath="$PROJECT_DIR$/fixture/song.py" />
+      <change beforePath="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" afterPath="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" />
       <change beforePath="$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py" afterPath="$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,23 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_2_add_songwriters_publishers.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
+      <file leaf-file-name="test_3_add_share_deal_check_dispute.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#28#67#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="song.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixture/song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="168" column="56" lean-forward="false" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
+            <state relative-caret-position="415">
+              <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
               <folding>
                 <element signature="e#28#92#0" expanded="true" />
               </folding>
@@ -45,23 +44,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_1_create_and_modify_song.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
+      <file leaf-file-name="navigate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/navigate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding>
-                <element signature="e#28#59#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="publisher.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/publisher.py">
+      <file leaf-file-name="test_1_create_and_modify_song.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+            <state relative-caret-position="255">
+              <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_2_add_songwriters_publishers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -76,13 +93,20 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/test</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/test_4_create_songwriter_menu_people.py" />
         <option value="$PROJECT_DIR$/test/test_3_create_recording_artist_global_search.py" />
         <option value="$PROJECT_DIR$/test/test_2.1_create_songwriter_menu_global_search.py" />
         <option value="$PROJECT_DIR$/test/test_2_1_create_songwriter_menu_global_search.py" />
@@ -122,16 +146,17 @@
         <option value="$PROJECT_DIR$/fixture/application.py" />
         <option value="$PROJECT_DIR$/fixture/locator.py" />
         <option value="$PROJECT_DIR$/fixture/note.py" />
-        <option value="$PROJECT_DIR$/fixture/navigate.py" />
         <option value="$PROJECT_DIR$/model/note.py" />
         <option value="$PROJECT_DIR$/model/modify.py" />
-        <option value="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" />
         <option value="$PROJECT_DIR$/model/songwriter.py" />
         <option value="$PROJECT_DIR$/model/publisher.py" />
         <option value="$PROJECT_DIR$/model/label.py" />
         <option value="$PROJECT_DIR$/model/collective.py" />
         <option value="$PROJECT_DIR$/model/artist.py" />
+        <option value="$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py" />
         <option value="$PROJECT_DIR$/fixture/song.py" />
+        <option value="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" />
+        <option value="$PROJECT_DIR$/fixture/navigate.py" />
         <option value="$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py" />
       </list>
     </option>
@@ -199,11 +224,6 @@
             <path>
               <item name="Cross_Edit_TestsAutomatization" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cross_Edit_TestsAutomatization" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cross_Edit_TestsAutomatization" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cross_Edit_TestsAutomatization" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -248,7 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test">
+  <component name="RunManager" selected="Python tests.py.test in test_3_add_share_deal_check_dispute.py">
     <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -329,6 +349,22 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_2_edit_song_information.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration name="py.test in test_3_add_share_deal_check_dispute.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CrossClearance_TestsAutomatization" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
     <configuration name="py.test in test_3_create_recording_artist.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,38 +397,22 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/other tests/test_5_create_publisher.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="py.test in test_8_global_search.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CrossClearance_TestsAutomatization" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_8_global_search.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_3_create_recording_artist.py" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_5_create_publisher.py" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_1_create_and_modify_song.py" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_8_global_search.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_2_edit_song_information.py" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_2_edit_song_information.py" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.py.test in test_3_add_share_deal_check_dispute.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_1_create_and_modify_song.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_2_edit_song_information.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_8_global_search.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_3_add_share_deal_check_dispute.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_1_create_and_modify_song.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_2_edit_song_information.py" />
       </list>
     </recent_temporary>
   </component>
@@ -413,35 +433,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test - 2018.02.18 at 17h 55m 27s.xml">
-      <configuration name="py.test in test" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 23m 46s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test - 2018.02.18 at 18h 02m 51s.xml">
-      <configuration name="py.test in test" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 24m 31s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test - 2018.02.18 at 18h 06m 28s.xml">
-      <configuration name="py.test in test" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 49m 17s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test - 2018.02.18 at 18h 10m 39s.xml">
-      <configuration name="py.test in test" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 50m 47s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test - 2018.02.18 at 18h 20m 37s.xml">
-      <configuration name="py.test in test" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 52m 23s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_2_add_songwriters_publishers_py - 2018.02.18 at 17h 28m 17s.xml">
-      <configuration name="py.test in test_2_add_songwriters_publishers.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 53m 32s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_2_add_songwriters_publishers_py - 2018.02.18 at 17h 32m 28s.xml">
-      <configuration name="py.test in test_2_add_songwriters_publishers.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 53m 53s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_2_add_songwriters_publishers_py - 2018.02.18 at 17h 39m 31s.xml">
-      <configuration name="py.test in test_2_add_songwriters_publishers.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 55m 04s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_2_add_songwriters_publishers_py - 2018.02.18 at 17h 41m 56s.xml">
-      <configuration name="py.test in test_2_add_songwriters_publishers.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 55m 23s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_2_add_songwriters_publishers_py - 2018.02.18 at 17h 47m 03s.xml">
-      <configuration name="py.test in test_2_add_songwriters_publishers.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.18 at 21h 56m 08s.xml">
+      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -507,12 +527,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/songwritertest.py" />
     <entry file="file://$PROJECT_DIR$/fixture/songwritertest.py" />
     <entry file="file://$PROJECT_DIR$/test/test_4_create_songwriter_menu_people.py" />
     <entry file="file://$PROJECT_DIR$/test/test_2.1_create_songwriter_menu_global_search.py" />
@@ -635,20 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/songwriter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -657,26 +662,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fixture/note.py" />
-    <entry file="file://$PROJECT_DIR$/fixture/navigate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/locator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -744,32 +734,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
+    <entry file="file://$PROJECT_DIR$/fixture/session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="58" />
           <folding>
-            <element signature="e#28#59#0" expanded="true" />
+            <element signature="e#28#86#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/song.py">
+    <entry file="file://$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="168" column="56" lean-forward="false" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
-          <folding>
-            <element signature="e#28#92#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/navigate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/song.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding>
-            <element signature="e#28#67#0" expanded="true" />
+            <element signature="e#28#92#0" expanded="true" />
           </folding>
         </state>
       </provider>

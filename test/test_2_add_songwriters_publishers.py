@@ -4,7 +4,7 @@ from model.publisher import Publisher
 
 
 def test_create_songwriter_in_song(app):
-    app.navigate.tab_songwriters()
+    app.navigate.switch_to_tab(tab_name="Songwriters")
     app.song.add_entity_link(name="person_songwriter_#1", text="writing")
 
 
@@ -28,7 +28,7 @@ def test_edit_songwriter_in_song(app):
 
 
 def test_create_publisher_in_song(app):
-    app.navigate.tab_publishers()
+    app.navigate.switch_to_tab(tab_name="Publishers")
     app.song.add_entity_link(name="company_publisher_#1", text="publishing")
 
 

@@ -166,11 +166,11 @@ class SongHelper:
         wd.find_element_by_id("writing_select_role_item_1").click()
         wd.find_element_by_id("writing_select_role_item_2").click()
 
-    def fill_identifiers_fields_in_edit_songwriter_modal_window(self, data):
-        self.identifiers_field_value("songwriter_ipicae_identification_new", data.ipicae)
-        self.identifiers_field_value("songwriter_asap_identification_new", data.asap)
+    def fill_identifiers_fields_in_edit_entity_modal_window(self, data, entity):
+        self.identifiers_field_value(entity + "_ipicae_identification_new", data.ipicae)
+        self.identifiers_field_value(entity + "_asap_identification_new", data.asap)
 
-    def edit_sonwriter_info_in_modal_window(self, new_data):
+    def edit_entity_info_in_modal_window(self, new_data, entity_name, entity_identifier):
         wd = self.app.wd
         wait = self.app.wait
         # xpath
@@ -183,19 +183,19 @@ class SongHelper:
                                                                                               div_number="3"))))
         # edit song name
         wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
-        self.check_cancel_button("writing_name_edit")
+        self.check_cancel_button(entity_name + "_name_edit")
         wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
-        self.change_data_value("writing_name_edit", new_data.name)
+        self.change_data_value(entity_name + "_name_edit", new_data.name)
         # edit ipicae
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="2")).click()
-        self.check_cancel_button("songwriter_ipicae_identification_edit")
+        self.check_cancel_button(entity_identifier + "_ipicae_identification_edit")
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="2")).click()
-        self.change_data_value("songwriter_ipicae_identification_edit", new_data.ipicae)
+        self.change_data_value(entity_identifier + "_ipicae_identification_edit", new_data.ipicae)
         # edit asap
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="3")).click()
-        self.check_cancel_button("songwriter_asap_identification_edit")
+        self.check_cancel_button(entity_identifier + "_asap_identification_edit")
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="3")).click()
-        self.change_data_value("songwriter_asap_identification_edit", new_data.asap)
+        self.change_data_value(entity_identifier + "_asap_identification_edit", new_data.asap)
         wd.find_element_by_class_name("btn.btn-success").click()
 
 #    def delete_song(self):

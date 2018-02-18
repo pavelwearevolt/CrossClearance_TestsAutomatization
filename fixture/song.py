@@ -198,6 +198,39 @@ class SongHelper:
         self.change_data_value(entity_identifier + "_asap_identification_edit", new_data.asap)
         wd.find_element_by_class_name("btn.btn-success").click()
 
+    def open_dropdown_menu(self):
+        # drop-down menu to add share or deal
+        wd = self.app.wd
+        wd.find_element_by_class_name("dropdown-toggle.btn-green.btn.btn-xs.btn-inline").click()
+
+    def open_modal_window(self, text):
+        # modal window adding share or deal
+        wd = self.app.wd
+        wd.find_element_by_link_text(text).click()
+
+    def close_modal_window_button_close(self):
+        # close the window using the cross in the upper left corner
+        wd = self.app.wd
+        wd.find_element_by_class_name("close").click()
+
+    def close_modal_window_button_cancel(self):
+        wd = self.app.wd
+        wd.find_element_by_class_name("btn.btn-outlined.btn-danger").click()
+
+    def fill_share_form(self, territory, territory_locator, percentage):
+        wd = self.app.wd
+        wd.find_element_by_id("territory_search").click()
+        wd.find_element_by_id("territory_search").clear()
+        wd.find_element_by_id("territory_search").send_keys(territory)
+        wd.find_element_by_class_name(territory_locator).click()
+        wd.find_element_by_id("share-percentage-input").click()
+        wd.find_element_by_id("share-percentage-input").clear()
+        wd.find_element_by_id("share-percentage-input").send_keys(percentage)
+        wd.find_element_by_class_name("btn.btn-success").click()
+        time.sleep(3)
+
+
+
 #    def delete_song(self):
 #        wd = self.app.wd
 #        wait = self.app.wait

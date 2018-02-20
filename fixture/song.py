@@ -196,7 +196,7 @@ class SongHelper:
         self.check_cancel_button(entity_identifier + "_asap_identification_edit")
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="3")).click()
         self.change_data_value(entity_identifier + "_asap_identification_edit", new_data.asap)
-        wd.find_element_by_class_name("btn.btn-success").click()
+        self.save_button()
 
     def open_dropdown_menu(self):
         # drop-down menu to add share or deal
@@ -204,7 +204,7 @@ class SongHelper:
         wd.find_element_by_class_name("dropdown-toggle.btn-green.btn.btn-xs.btn-inline").click()
 
     def open_modal_window(self, text):
-        # modal window adding share or deal
+        # open modal window adding share or deal
         wd = self.app.wd
         wd.find_element_by_link_text(text).click()
 
@@ -214,8 +214,9 @@ class SongHelper:
         wd.find_element_by_class_name("close").click()
 
     def close_modal_window_button_cancel(self):
+        # close the window using the button cancel
         wd = self.app.wd
-        wd.find_element_by_class_name("btn.btn-outlined.btn-danger").click()
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[3]/span/button[1]").click()
 
     def fill_share_form(self, territory, territory_locator, percentage):
         wd = self.app.wd
@@ -223,12 +224,42 @@ class SongHelper:
         wd.find_element_by_id("territory_search").clear()
         wd.find_element_by_id("territory_search").send_keys(territory)
         wd.find_element_by_class_name(territory_locator).click()
+        self.fill_percentage_field(percentage)
+        self.save_button()
+        time.sleep(3)
+
+    def fill_percentage_field(self, percentage):
+        wd = self.app.wd
         wd.find_element_by_id("share-percentage-input").click()
         wd.find_element_by_id("share-percentage-input").clear()
         wd.find_element_by_id("share-percentage-input").send_keys(percentage)
-        wd.find_element_by_class_name("btn.btn-success").click()
-        time.sleep(3)
 
+    def check_entity_in_new_deal_modal_window(self, entity_id, entity_name):
+        wd = self.app.wd
+        element = wd.find_element_by_xpath(self.app.locator.new_deal_entity_locator(entity_id)).text
+        assert element == entity_name
+
+    def fill_field_in_new_deal_modal_window(self, field_id, field_value, field_locator):
+        wd = self.app.wd
+        items_list = []
+        # выбрать какое поле будет заполнено
+        wd.find_element_by_id(field_id).click()
+        elements = wd.find_elements_by_class_name("Select-option")
+        for element in elements:
+            items_list.append(element.text)
+        item_index = items_list.index(field_value)
+        if item_index == 0:
+            wd.find_element_by_xpath(self.app.locator.choose_item_in_field_locator(field_locator, item_index + 1)).click()
+        else:
+            wd.find_element_by_xpath(self.app.locator.choose_item_in_field_locator(field_locator, item_index + 1)).click()
+
+    def save_button(self):
+        wd = self.app.wd
+        wd.find_element_by_class_name("btn.btn-success").click()
+
+    def clear_field_in_new_deal_modal_window(self, field_id):
+        wd = self.app.wd
+        wd.find_element_by_id(field_id).click()
 
 
 #    def delete_song(self):

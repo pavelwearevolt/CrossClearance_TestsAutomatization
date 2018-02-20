@@ -36,3 +36,18 @@ class LocatorHelper:
         # подстановка в %s нового знаения
         locator = "%s_new_create"
         return locator % (text)
+
+    def new_deal_entity_locator(self, entity_id):
+        locator = "//*[@id='%s']/div[1]"
+        return locator % (entity_id)
+
+    def choose_item_in_field_locator(self, field_locator, item):
+        # fields in new deal modal window
+        # "2" - Songwriters
+        # "3" - Publisher
+        # "4" - Licensed Territory
+        # "5" - License origin
+        # "6" - Media Types
+        # локатор для выбора элементов в полях при заполнении формы создани new deal
+        locator = "//div[@class='col-xs-12']/form[2]/div[%s]/div/div[2]/div/div[%s]"
+        return locator % (field_locator, item)

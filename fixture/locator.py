@@ -6,6 +6,14 @@ class LocatorHelper:
     def __init__(self, app):
         self.app = app
 
+    def note_edit_button_locator(self, div_number):
+        locator = "//form[@class='form-horizontal']/div[10]/div/div/div[2]/div[%s]/div/button"
+        return locator % (div_number)
+
+    def item_in_note_dropdown_menu_locator(self, div_number, li_number):
+        locator = "//form[@class='form-horizontal']/div[10]/div/div/div[2]/div[%s]/div/ul/li[%s]/a"
+        return locator % (div_number, li_number)
+
     def edit_identifier(self, locator_path_identifier, div_number):
         # подстановка в %s нового знаения
         locator = locator_path_identifier

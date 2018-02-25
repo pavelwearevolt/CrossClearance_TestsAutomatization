@@ -56,3 +56,22 @@ def test_edit_song_info(app):
         bmi="0002314562",
         sesac="4325666752"
         ))
+
+
+def test_edit_note(app):
+    # note_number - note's sequence number on the song editing page (for example first note)
+    app.song.open_note_dropdown_menu(note_number="1")
+    # note_number - note's sequence number on the song editing page (for example first note)
+    # item_number - button edit or remove note
+    # 1 - edit
+    # 3 - remove
+    app.song.choose_item_in_note_dropdown_menu(note_number="1", item_number="1")
+    app.song.close_modal_window_button_close()
+    app.song.open_note_dropdown_menu(note_number="1")
+    app.song.choose_item_in_note_dropdown_menu(note_number="1", item_number="1")
+    app.song.button_cancel_in_edit_note_modal_window()
+    app.song.open_note_dropdown_menu(note_number="1")
+    app.song.choose_item_in_note_dropdown_menu(note_number="1", item_number="1")
+    app.song.edit_note_text(Note(note="Contemplantes ad proprietate vocis disseruero, factus Buddha!!!!!"))
+    app.song.button_edit_in_edit_note_modal_window()
+

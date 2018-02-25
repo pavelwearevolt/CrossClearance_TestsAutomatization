@@ -122,7 +122,35 @@ class SongHelper:
         self.check_cancel_button("song_sesac_identification_edit")
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="8")).click()
         self.change_data_value("song_sesac_identification_edit", new_data.sesac)
-        # edit note
+
+    def open_note_dropdown_menu(self, note_number):
+        wd = self.app.wd
+        # note_number - note's sequence number on the song editing page (for example first note)
+        wd.find_element_by_xpath(self.app.locator.note_edit_button_locator(div_number=note_number)).click()
+
+    def choose_item_in_note_dropdown_menu(self, note_number, item_number):
+        wd = self.app.wd
+        # note_number - note's sequence number on the song editing page (for example first note)
+        # item_number - button edit or remove note
+        # 1 - edit
+        # 3 - remove
+        wd.find_element_by_xpath(self.app.locator.item_in_note_dropdown_menu_locator(
+            div_number=note_number, li_number=item_number)).click()
+
+    def edit_note_text(self, text):
+        wd = self.app.wd
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/textarea").click()
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/textarea").clear()
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/textarea").send_keys(text.note)
+
+    def button_cancel_in_edit_note_modal_window(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[3]/button[2]").click()
+
+    def button_edit_in_edit_note_modal_window(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[3]/button[1]").click()
+        time.sleep(3)
 
     def check_alert_info(self, alert_text):
         wd = self.app.wd

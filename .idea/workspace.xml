@@ -22,11 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_3_add_share_deal_check_dispute.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_3_add_share_deal_check_dispute.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            <state relative-caret-position="2344">
+              <caret line="206" column="1" lean-forward="false" selection-start-line="206" selection-start-column="1" selection-end-line="206" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testing_methods _test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/other tests/testing_methods _test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -35,8 +45,8 @@
       <file leaf-file-name="song.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="238" column="93" lean-forward="true" selection-start-line="238" selection-start-column="84" selection-end-line="238" selection-end-column="93" />
+            <state relative-caret-position="239">
+              <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
               <folding>
                 <element signature="e#28#92#0" expanded="true" />
               </folding>
@@ -44,21 +54,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="locator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fixture/locator.py">
+      <file leaf-file-name="test_2_add_songwriters_publishers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="375">
+              <caret line="26" column="65" lean-forward="false" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_2_add_songwriters_publishers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
+      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="56" />
+            <state relative-caret-position="285">
+              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/navigate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="locator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/locator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -87,8 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/test_3_create_recording_artist_global_search.py" />
-        <option value="$PROJECT_DIR$/test/test_2.1_create_songwriter_menu_global_search.py" />
         <option value="$PROJECT_DIR$/test/test_2_1_create_songwriter_menu_global_search.py" />
         <option value="$PROJECT_DIR$/test/test_5_create_recording_artist_menu_global_search.py" />
         <option value="$PROJECT_DIR$/test/test_6_create_master_recording.py" />
@@ -134,10 +162,12 @@
         <option value="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" />
         <option value="$PROJECT_DIR$/fixture/navigate.py" />
         <option value="$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py" />
-        <option value="$PROJECT_DIR$/fixture/song.py" />
-        <option value="$PROJECT_DIR$/fixture/locator.py" />
         <option value="$PROJECT_DIR$/test/test.py" />
+        <option value="$PROJECT_DIR$/fixture/locator.py" />
+        <option value="$PROJECT_DIR$/test/testing_methods _test.py" />
+        <option value="$PROJECT_DIR$/fixture/song.py" />
         <option value="$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py" />
+        <option value="$PROJECT_DIR$/other tests/testing_methods _test.py" />
       </list>
     </option>
   </component>
@@ -188,8 +218,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,6 +231,11 @@
               <item name="Cross_Edit_TestsAutomatization" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cross_Edit_TestsAutomatization" type="462c0819:PsiDirectoryNode" />
               <item name="fixture" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cross_Edit_TestsAutomatization" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cross_Edit_TestsAutomatization" type="462c0819:PsiDirectoryNode" />
+              <item name="other tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cross_Edit_TestsAutomatization" type="b2602c69:ProjectViewProjectNode" />
@@ -229,11 +264,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/other tests" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/test/other tests" />
       <recent name="$PROJECT_DIR$/ignore test (temporarily)" />
       <recent name="$PROJECT_DIR$/fixture" />
-      <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -248,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test_3_add_share_deal_check_dispute.py">
+  <component name="RunManager" selected="Python tests.py.test in test">
     <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -313,22 +348,6 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="py.test in test_2_edit_song_information.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CrossClearance_TestsAutomatization" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_2_edit_song_information.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <configuration name="py.test in test_3_add_share_deal_check_dispute.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -377,22 +396,38 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/other tests/test_5_create_publisher.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration name="py.test in testing_methods _test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CrossClearance_TestsAutomatization" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/other tests/testing_methods _test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_3_create_recording_artist.py" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_5_create_publisher.py" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_1_create_and_modify_song.py" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_2_edit_song_information.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.py.test in test_3_add_share_deal_check_dispute.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_3_add_share_deal_check_dispute.py" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.py.test in testing_methods _test.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_3_add_share_deal_check_dispute.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_1_create_and_modify_song.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_2_edit_song_information.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in testing_methods _test.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_3_add_share_deal_check_dispute.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_2_add_songwriters_publishers.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_1_create_and_modify_song.py" />
       </list>
     </recent_temporary>
   </component>
@@ -413,35 +448,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 08h 39m 29s.xml">
+    <history-entry file="py_test_in_test - 2018.02.25 at 16h 49m 54s.xml">
+      <configuration name="py.test in test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test - 2018.02.25 at 16h 59m 19s.xml">
+      <configuration name="py.test in test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test - 2018.02.25 at 17h 05m 21s.xml">
+      <configuration name="py.test in test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test - 2018.02.25 at 17h 28m 25s.xml">
+      <configuration name="py.test in test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.25 at 13h 48m 55s.xml">
       <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 08h 53m 36s.xml">
+    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.25 at 14h 00m 19s.xml">
       <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 08h 55m 40s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.02.25 at 17h 08m 53s.xml">
+      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 08h 56m 46s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.02.25 at 17h 10m 00s.xml">
+      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 09h 04m 33s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.02.25 at 17h 12m 21s.xml">
+      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 09h 23m 25s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 09h 24m 51s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 09h 26m 09s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 09h 30m 59s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_3_add_share_deal_check_dispute_py - 2018.02.20 at 09h 36m 18s.xml">
-      <configuration name="py.test in test_3_add_share_deal_check_dispute.py" configurationId="tests" />
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.02.25 at 17h 13m 47s.xml">
+      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -452,13 +487,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30941176" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28899637" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28899637" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2840028" sideWeight="0.29081634" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39882353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2840028" sideWeight="0.29081634" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -478,11 +513,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30941176" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28899637" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28899637" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2840028" sideWeight="0.49369368" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22269204" sideWeight="0.7091837" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -491,8 +526,8 @@
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27753934" sideWeight="0.5063063" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39882353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2840028" sideWeight="0.29081634" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -512,7 +547,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fixture/songwritertest.py" />
     <entry file="file://$PROJECT_DIR$/test/test_4_create_songwriter_menu_people.py" />
     <entry file="file://$PROJECT_DIR$/test/test_2.1_create_songwriter_menu_global_search.py" />
     <entry file="file://$PROJECT_DIR$/test/test_2_1_create_songwriter_menu_global_search.py" />
@@ -687,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,26 +731,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.py" />
     <entry file="file://$PROJECT_DIR$/fixture/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="58" />
+        <state relative-caret-position="285">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="e#28#86#0" expanded="false" />
           </folding>
@@ -727,7 +745,7 @@
     <entry file="file://$PROJECT_DIR$/fixture/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="99" />
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="99" />
           <folding />
         </state>
       </provider>
@@ -735,7 +753,7 @@
     <entry file="file://$PROJECT_DIR$/fixture/search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -748,36 +766,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/locator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="65" lean-forward="false" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/song.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="238" column="93" lean-forward="true" selection-start-line="238" selection-start-column="84" selection-end-line="238" selection-end-column="93" />
+        <state relative-caret-position="239">
+          <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
           <folding>
             <element signature="e#28#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/locator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state relative-caret-position="2344">
+          <caret line="206" column="1" lean-forward="false" selection-start-line="206" selection-start-column="1" selection-end-line="206" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other tests/testing_methods _test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding />
         </state>
       </provider>

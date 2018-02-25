@@ -63,6 +63,7 @@ class SongHelper:
         wd.find_element_by_id(self.app.locator.add_name(text)).clear()
         wd.find_element_by_id(self.app.locator.add_name(text)).send_keys(new_name)
         wd.find_element_by_id(self.app.locator.add_name_create_button(text)).click()
+        time.sleep(3)
 
     def get_item_list(self, item_data):
         wd = self.app.wd
@@ -136,7 +137,7 @@ class SongHelper:
         wd.find_element_by_id(self.app.locator.add_entity_link(text)).clear()
         wd.find_element_by_id(self.app.locator.add_entity_link(text)).send_keys(name)
         wd.find_element_by_id(self.app.locator.add_entity_link_create_button(text)).click()
-        wait.until(EC.presence_of_element_located((By.LINK_TEXT, name)))
+        time.sleep(3)
 
     def open_edit_entity_modal_window(self):
         # open edit songwriter modal window in the edit song page
@@ -198,15 +199,24 @@ class SongHelper:
         self.change_data_value(entity_identifier + "_asap_identification_edit", new_data.asap)
         self.save_button()
 
-    def open_dropdown_menu(self):
+    def open_dropdown_menu(self, entity_number):
         # drop-down menu to add share or deal
         wd = self.app.wd
-        wd.find_element_by_class_name("dropdown-toggle.btn-green.btn.btn-xs.btn-inline").click()
+        wd.find_element_by_xpath(self.app.locator.dropdown_menu_add_share_deal_locator(div_number=entity_number)).click()
 
-    def open_modal_window(self, text):
+    def open_modal_window(self, entity_number, function_number):
         # open modal window adding share or deal
+        # entity_number - number of songwriter or publisher
+        # entity's sequence number on the song editing page (for example first songwriter)
+        # function_number - button share or button deal
+        # TAB "SONGWRITERS"
+        # 1 - share
+        # 2 - deal
+        # TAB "PUBLISHERS"
+        # 1 - deal
         wd = self.app.wd
-        wd.find_element_by_link_text(text).click()
+        wd.find_element_by_xpath(self.app.locator.choose_share_deal_locator(div_number=entity_number,
+                                                                            li_number=function_number)).click()
 
     def close_modal_window_button_close(self):
         # close the window using the cross in the upper left corner
@@ -260,6 +270,29 @@ class SongHelper:
     def clear_field_in_new_deal_modal_window(self, field_id):
         wd = self.app.wd
         wd.find_element_by_id(field_id).click()
+
+    def check_share_button_in_dispute_and_not(self, songwriter_number, button_color):
+        wd = self.app.wd
+        # check share button color
+        element_color = wd.find_element_by_xpath(self.app.locator.share_button_locator(
+            div_number=songwriter_number)).value_of_css_property("background-color")
+        assert element_color == button_color, "Wrong color of share button"
+
+    def open_share_dropdown_menu(self, songwriter_number):
+        wd = self.app.wd
+        wd.find_element_by_xpath(self.app.locator.share_button_locator(div_number=songwriter_number)).click()
+
+    def choose_item_in_share_dropdown_menu(self, songwriter_number, item_number):
+        wd = self.app.wd
+        wd.find_element_by_xpath(self.app.locator.item_in_share_dropdown_menu_locator(
+            div_number=songwriter_number, li_number=item_number)).click()
+
+    def clear_share_territory_field(self):
+        wd = self.app.wd
+        wd.find_element_by_id("territory_cancel").click()
+        assert wd.find_element_by_id("territory_search").get_attribute("placeholder") == "Start typing to search...", \
+            "Wrong placeholder text or field does not cleared"
+
 
 
 #    def delete_song(self):

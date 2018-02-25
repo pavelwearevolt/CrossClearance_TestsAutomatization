@@ -51,3 +51,19 @@ class LocatorHelper:
         # локатор для выбора элементов в полях при заполнении формы создани new deal
         locator = "//div[@class='col-xs-12']/form[2]/div[%s]/div/div[2]/div/div[%s]"
         return locator % (field_locator, item)
+
+    def dropdown_menu_add_share_deal_locator(self, div_number):
+        locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/table/tbody/tr/td[2]/h3/div/button"
+        return locator % (div_number)
+
+    def choose_share_deal_locator(self, div_number, li_number):
+        locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/table/tbody/tr/td[2]/h3/div/ul/li[%s]/a"
+        return locator % (div_number, li_number)
+
+    def share_button_locator(self, div_number):
+        locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/div/span/div/div/div[2]/div/button"
+        return locator % (div_number)
+
+    def item_in_share_dropdown_menu_locator(self, div_number, li_number):
+        locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/div/span/div/div/div[2]/div/ul/li[%s]/a"
+        return locator % (div_number, li_number)

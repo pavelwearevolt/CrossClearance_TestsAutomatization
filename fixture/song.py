@@ -212,8 +212,10 @@ class SongHelper:
         # TAB "SONGWRITERS"
         # 1 - share
         # 2 - deal
+        # 4 - remove
         # TAB "PUBLISHERS"
         # 1 - deal
+        # 3 - remove
         wd = self.app.wd
         wd.find_element_by_xpath(self.app.locator.choose_share_deal_locator(div_number=entity_number,
                                                                             li_number=function_number)).click()
@@ -269,7 +271,7 @@ class SongHelper:
 
     def clear_field_in_new_deal_modal_window(self, field_id):
         wd = self.app.wd
-        wd.find_element_by_id(field_id).click()
+        wd.find_element_by_id(field_id + "_clear").click()
 
     def check_share_button_in_dispute_and_not(self, songwriter_number, button_color):
         wd = self.app.wd
@@ -292,6 +294,26 @@ class SongHelper:
         wd.find_element_by_id("territory_cancel").click()
         assert wd.find_element_by_id("territory_search").get_attribute("placeholder") == "Start typing to search...", \
             "Wrong placeholder text or field does not cleared"
+
+    def open_deal_dropdown_menu(self, entity_number):
+        wd = self.app.wd
+        # entity_number - number of songwriter or publisher
+        # entity's sequence number on the song editing page (for example first songwriter)
+        wd.find_element_by_xpath(self.app.locator.deal_edit_button_locator(div_number=entity_number)).click()
+
+    def choose_item_in_deal_dropdown_menu(self, entity_number, item_number):
+        wd = self.app.wd
+        # entity_number - number of songwriter or publisher (can edit deal in tab "Songwriters" and tab "Publishers")
+        # entity's sequence number on the song editing page (for example first songwriter)
+        wd.find_element_by_xpath(self.app.locator.item_in_deal_dropdown_menu_locator(
+            div_number=entity_number, li_number=item_number)).click()
+
+    def remove_one_of_chosen_media_type(self, type_number):
+        wd = self.app.wd
+        # remove one of chosen media type
+        # type_number - sequence number of chosen media types in field Media Types
+        wd.find_element_by_xpath(self.app.locator.remove_media_type_button_locator(div_number=type_number)).click()
+
 
 
 

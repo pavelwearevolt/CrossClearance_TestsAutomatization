@@ -67,3 +67,15 @@ class LocatorHelper:
     def item_in_share_dropdown_menu_locator(self, div_number, li_number):
         locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/div/span/div/div/div[2]/div/ul/li[%s]/a"
         return locator % (div_number, li_number)
+
+    def deal_edit_button_locator(self, div_number):
+        locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/div/div/div/table/tbody/tr/td[6]/div[2]/button"
+        return locator % (div_number)
+
+    def item_in_deal_dropdown_menu_locator(self, div_number, li_number):
+        locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/div/div/div/table/tbody/tr/td[6]/div[2]/ul/li[%s]/a"
+        return locator % (div_number, li_number)
+
+    def remove_media_type_button_locator(self, div_number):
+        locator = "//div[@id='media_type_select']/div[%s]/span[2]"
+        return locator % (div_number)

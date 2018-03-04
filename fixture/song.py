@@ -26,8 +26,8 @@ class SongHelper:
             default_value.append(value.text)
         while '' in default_value:
             default_value.remove('')
-        assert len(default_value) == 2
-        assert name in default_value
+        assert len(default_value) == 2, "At creation the superfluous fields are filled"
+        assert name in default_value, "Does not match the values that were entered when creating"
 
     def identifiers_field_value(self, field_name, text):
         wd = self.app.wd
@@ -196,10 +196,8 @@ class SongHelper:
             default_value.append(value.text)
         while '' in default_value:
             default_value.remove('')
-        assert len(default_value) == 2
-        assert name in default_value
-
-
+        assert len(default_value) == 2, "At creation the superfluous fields are filled"
+        assert name in default_value, "Does not match the values that were entered when creating"
 
     def close_edit_entity_modal_window(self):
         # close edit songwriter modal window in the edit song page

@@ -49,7 +49,7 @@ class LocatorHelper:
         locator = "//*[@id='%s']/div[1]"
         return locator % (entity_id)
 
-    def choose_item_in_field_locator(self, field_locator, item):
+    def choose_item_in_field_media_type_locator(self, field_locator, item):
         # fields in new deal modal window
         # "2" - Songwriters
         # "3" - Publisher

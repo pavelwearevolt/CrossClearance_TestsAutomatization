@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f13e953-40a0-4037-905e-1c243ce3e100" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/fixture/song.py" afterPath="$PROJECT_DIR$/fixture/song.py" />
       <change beforePath="$PROJECT_DIR$/other tests/testing_methods _test.py" afterPath="$PROJECT_DIR$/other tests/testing_methods _test.py" />
       <change beforePath="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" afterPath="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" />
     </list>
@@ -20,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testing_methods _test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testing_methods _test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other tests/testing_methods _test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="e#28#39#0" expanded="true" />
               </folding>
@@ -32,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_1_create_and_modify_song.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_1_create_and_modify_song.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+            <state relative-caret-position="283">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#28#59#0" expanded="true" />
               </folding>
@@ -47,8 +48,8 @@
       <file leaf-file-name="song.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-632">
-              <caret line="116" column="22" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="22" />
+            <state relative-caret-position="44">
+              <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="33" />
               <folding>
                 <element signature="e#28#92#0" expanded="true" />
               </folding>
@@ -158,8 +159,8 @@
         <option value="$PROJECT_DIR$/fixture/locator.py" />
         <option value="$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py" />
         <option value="$PROJECT_DIR$/fixture/song.py" />
-        <option value="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" />
         <option value="$PROJECT_DIR$/other tests/testing_methods _test.py" />
+        <option value="$PROJECT_DIR$/test/test_1_create_and_modify_song.py" />
       </list>
     </option>
   </component>
@@ -445,12 +446,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.04 at 19h 08m 21s.xml">
-      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.04 at 19h 42m 38s.xml">
-      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_testing_methods__test_py - 2018.03.04 at 19h 48m 36s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
@@ -473,6 +468,12 @@
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_testing_methods__test_py - 2018.03.04 at 22h 12m 08s.xml">
+      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.04 at 22h 30m 13s.xml">
+      <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.04 at 22h 33m 42s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -792,20 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-          <folding>
-            <element signature="e#28#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/song.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-632">
-          <caret line="116" column="22" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="22" />
+        <state relative-caret-position="44">
+          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="33" />
           <folding>
             <element signature="e#28#92#0" expanded="true" />
           </folding>
@@ -814,10 +805,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/other tests/testing_methods _test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="e#28#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_1_create_and_modify_song.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#28#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -120,9 +120,11 @@ class SongHelper:
         locator_path_identifier = "//form[@class='form-horizontal']/div[%s]/div/div[2]/span/li/div[2]/div[1]/div[1]/div/a"
         time.sleep(2)
         # edit song name
-        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
+        # div_number - sequence number of the song name, for example, if the song has only one name div_number - "2"
+        # if the song has several names, if want choose second name - div_number - "2", the third - div_number - "3", ect.
+        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="1")).click()
         self.check_cancel_button("song_name_edit")
-        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
+        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="1")).click()
         self.change_data_value("song_name_edit", new_data.name)
         # edit iswc
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="4")).click()

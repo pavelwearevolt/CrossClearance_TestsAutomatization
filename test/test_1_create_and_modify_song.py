@@ -57,6 +57,15 @@ def test_edit_song_info(app):
         bmi="0002314562",
         sesac="4325666752"
         ))
+    time.sleep(3)
+    app.song.check_filled_fields_value(
+        name="edited_song_A",
+        iswc="T-553.682.543-2",
+        asap="8554215643",
+        ascap="536275432",
+        bmi="0002314562",
+        sesac="4325666752"
+        )
 
 
 def test_add_and_edit_note(app):

@@ -5,10 +5,10 @@ import time
 def test_add_share(app):
     app.navigate.switch_to_tab(tab_name="Songwriters")
     # entity_number - entity's (songwriter or publisher) sequence number on the song editing page
-    # in this test entity_number - sequence number of songwriter
+    # in this test entity_number - sequence number of songwriter (for example "1" - first songwriter)
     app.song.open_dropdown_menu(entity_number="1")
     # entity_number - number of songwriter or publisher
-    # entity's sequence number on the song editing page (for example first songwriter)
+    # entity's sequence number on the song editing page (for example "1" - first songwriter)
     # function_number - button share or button deal
     # 1 - share
     # 2 - deal
@@ -28,7 +28,7 @@ def test_add_share(app):
 
 def test_add_deal_tab_songwriter(app):
     # entity_number - entity's (songwriter or publisher) sequence number on the song editing page
-    # in this test entity_number - sequence number of songwriter
+    # in this test entity_number - sequence number of songwriter (for example "1" - first songwriter)
     app.song.open_dropdown_menu(entity_number="1")
     # entity_number - number of songwriter or publisher
     # entity's sequence number on the song editing page (for example first songwriter)
@@ -146,16 +146,16 @@ def test_share_is_not_in_dispute(app):
     # add second deal in tab "Publishers"
 #    app.navigate.switch_to_tab(tab_name="Publishers")
     # entity_number - entity's (songwriter or publisher) sequence number on the song editing page
-    # in this test entity_number - sequence number of publisher
+    # in this test entity_number - sequence number of publisher (for example "1" - first publisher)
 #    app.song.open_dropdown_menu(entity_number="1")
     # entity_number - number of songwriter or publisher
-    # entity's sequence number on the song editing page (for example first songwriter)
+    # entity's sequence number on the song editing page (for example "1" - first songwriter)
     # function_number - button share or button deal
     # TAB "SONGWRITERS"
-    # 1 - share
-    # 2 - deal
+    # "1" - share
+    # "2" - deal
     # TAB "PUBLISHERS"
-    # 1 - deal
+    # "1" - deal
 #    app.song.open_modal_window(entity_number="1", function_number="1")
 #    app.song.check_entity_in_new_deal_modal_window(entity_id="publishing_select", entity_name="company_publisher_#1")
     # fill publisher field

@@ -45,6 +45,22 @@ class SongHelper:
         self.identifiers_field_value("song_bmi_identification_new", data.bmi)
         self.identifiers_field_value("song_sesac_identification_new", data.sesac)
 
+    def check_filled_fields_value(self, name, iswc, asap, ascap, bmi, sesac):
+        wd = self.app.wd
+        default_value = []
+        fields_value = wd.find_elements_by_class_name("list-group")
+        for value in fields_value:
+            default_value.append(value.text)
+        while '' in default_value:
+            default_value.remove('')
+        assert len(default_value) == 7, "Not all fields are filled in"
+        assert name in default_value, "Does not match the value entered during filling"
+        assert iswc in default_value, "Does not match the value entered during filling"
+        assert asap in default_value, "Does not match the value entered during filling"
+        assert ascap in default_value, "Does not match the value entered during filling"
+        assert bmi in default_value, "Does not match the value entered during filling"
+        assert sesac in default_value, "Does not match the value entered during filling"
+
     def add_note(self, text):
         wd = self.app.wd
         wd.find_element_by_css_selector("textarea.form-control._3N_4MUdz6Is-muISLxDGRP").click()

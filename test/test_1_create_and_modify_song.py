@@ -37,6 +37,15 @@ def test_modify_song_general(app):
         bmi="0002314566",
         sesac="4325666754"
         ))
+    time.sleep(3)
+    app.song.check_filled_fields_value(
+        name="song_A",
+        iswc="T-553.682.543-1",
+        asap="8554215642",
+        ascap="536275433",
+        bmi="0002314566",
+        sesac="4325666754"
+        )
     app.song.add_note(Note(note="Contemplantes ad proprietate vocis disseruero, factus Buddha."))
 
 

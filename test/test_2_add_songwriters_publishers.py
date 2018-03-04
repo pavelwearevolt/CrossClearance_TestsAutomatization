@@ -10,6 +10,7 @@ def test_create_songwriter_in_song(app):
 
 def test_edit_songwriter_in_song(app):
     app.song.open_edit_entity_modal_window()
+    app.song.check_fields_value_default(name="person_songwriter_#1")
     app.song.close_edit_entity_modal_window()
     app.song.open_edit_entity_modal_window()
     app.song.check_songwriter_default_role(role_1="Author", role_2="Composer")
@@ -34,6 +35,7 @@ def test_create_publisher_in_song(app):
 
 def test_edit_publisher_in_song(app):
     app.song.open_edit_entity_modal_window()
+    app.song.check_fields_value_default_in_entity_modal_window(name="company_publisher_#1")
     app.song.close_edit_entity_modal_window()
     app.song.open_edit_entity_modal_window()
     app.song.check_cross_id(locator_path="div._15tqGvIentb7leltuBfTAA>div>div.col-xs-9>div", prefix='CCPB')

@@ -179,9 +179,27 @@ class SongHelper:
         time.sleep(3)
 
     def open_edit_entity_modal_window(self):
-        # open edit songwriter modal window in the edit song page
+        # open edit songwriter or publisher modal window in the edit song page
+        # entity_number - number of songwriter or publisher
+        # entity's sequence number on the song editing page (for example first songwriter)
         wd = self.app.wd
         wd.find_element_by_class_name("_3XcHlhYq6SKGkDZzMHxu2Q").click()
+
+    def check_fields_value_default_in_entity_modal_window(self, name):
+        wd = self.app.wd
+        default_value = []
+        # switch to the desired element
+        modal_window = wd.find_element_by_class_name("modal-content")
+        # Use a variable modal_window to specify which element is searched for elements
+        fields_value = modal_window.find_elements_by_class_name("list-group")
+        for value in fields_value:
+            default_value.append(value.text)
+        while '' in default_value:
+            default_value.remove('')
+        assert len(default_value) == 2
+        assert name in default_value
+
+
 
     def close_edit_entity_modal_window(self):
         # close edit songwriter modal window in the edit song page
@@ -300,9 +318,9 @@ class SongHelper:
             items_list.append(element.text)
         item_index = items_list.index(field_value)
         if item_index == 0:
-            wd.find_element_by_xpath(self.app.locator.choose_item_in_field_locator(field_locator, item_index + 1)).click()
+            wd.find_element_by_xpath(self.app.locator.choose_item_in_field_media_type_locator(field_locator, item_index + 1)).click()
         else:
-            wd.find_element_by_xpath(self.app.locator.choose_item_in_field_locator(field_locator, item_index + 1)).click()
+            wd.find_element_by_xpath(self.app.locator.choose_item_in_field_media_type_locator(field_locator, item_index + 1)).click()
 
     def save_button(self):
         wd = self.app.wd

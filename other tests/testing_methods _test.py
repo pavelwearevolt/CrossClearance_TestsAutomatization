@@ -1,13 +1,18 @@
 __author__ = 'pavelkosicin'
+import time
+from model.note import Note
 
 
 def test_search_song(app):
-    app.song.search_song(query="song_A")
+    app.song.search_song(query="song_B")
 
 
-def test_switch_to_tab(app):
-    app.navigate.switch_to_tab(tab_name="Songwriters")
+def test_check_fields_value_default(app):
+    app.song.check_fields_value_default(name="song_A")
 
 
-def test_edit_deal_tab_songwriters(app):
-    
+
+
+
+
+

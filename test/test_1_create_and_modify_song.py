@@ -7,6 +7,7 @@ def test_create_song(app):
     app.song.create_song(name="song_A")
     app.song.check_cross_id(locator_path="div.list-group:nth-child(1)>span:nth-child(1)>li:nth-child(1)>" +\
                 "div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1)", prefix="CCSN")
+    app.song.check_fields_value_default(name="song_A")
 
 
 def test_search_song(app):

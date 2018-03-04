@@ -18,6 +18,17 @@ class SongHelper:
         wd.find_element_by_css_selector("button.btn.btn-green").click()
         wd.find_element_by_xpath("//div[@class='modal-body']//button[.='song']").click()
 
+    def check_fields_value_default(self, name):
+        wd = self.app.wd
+        default_value = []
+        fields_value = wd.find_elements_by_class_name("list-group")
+        for value in fields_value:
+            default_value.append(value.text)
+        while '' in default_value:
+            default_value.remove('')
+        assert len(default_value) == 2
+        assert name in default_value
+
     def identifiers_field_value(self, field_name, text):
         wd = self.app.wd
         if text is not None:

@@ -1,6 +1,7 @@
 __author__ = 'pavelkosicin'
 from model.modify import Modify
 from model.note import Note
+import time
 
 
 def test_create_song(app):
@@ -29,6 +30,8 @@ def test_check_empty_tabs(app):
 
 def test_modify_song_general(app):
     app.navigate.switch_to_tab(tab_name="General Info")
+    app.song.add_secondary_name(new_name="new_name_song_A", text="song")
+    time.sleep(3)
     app.song.fill_song_form(Modify(
         iswc="T-553.682.543-1",
         asap="8554215642",
@@ -37,15 +40,6 @@ def test_modify_song_general(app):
         sesac="4325666754"
         ))
     app.song.add_note(Note(note="Contemplantes ad proprietate vocis disseruero, factus Buddha."))
-
-
-def test_add_secondary_song_name(app):
-    # check song name
-#    app.song.get_item_list(item_data="song_A")
-    app.song.add_secondary_name(new_name="new_name_song_A", text="song")
-#    time.sleep(3)
-    # check secondary name
-#    app.song.get_item_list(item_data="new_name_song_A")
 
 
 def test_edit_song_info(app):

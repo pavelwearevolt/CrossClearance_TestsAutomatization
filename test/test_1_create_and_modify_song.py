@@ -46,7 +46,6 @@ def test_modify_song_general(app):
         bmi="0002314566",
         sesac="4325666754"
         )
-    app.song.add_note(Note(note="Contemplantes ad proprietate vocis disseruero, factus Buddha."))
 
 
 def test_edit_song_info(app):
@@ -60,7 +59,9 @@ def test_edit_song_info(app):
         ))
 
 
-def test_edit_note(app):
+def test_add_and_edit_note(app):
+    app.song.add_note(Note(note="Contemplantes ad proprietate vocis disseruero, factus Buddha."))
+    time.sleep(3)
     # note_number - note's sequence number on the song editing page (for example first note)
     app.song.open_note_dropdown_menu(note_number="1")
     # note_number - note's sequence number on the song editing page (for example first note)

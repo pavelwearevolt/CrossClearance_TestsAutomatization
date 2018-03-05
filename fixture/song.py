@@ -120,7 +120,7 @@ class SongHelper:
         locator_path_identifier = "//form[@class='form-horizontal']/div[%s]/div/div[2]/span/li/div[2]/div[1]/div[1]/div/a"
         time.sleep(2)
         # edit song name
-        # div_number - sequence number of the song name, for example, if the song has only one name div_number - "2"
+        # div_number - sequence number of the song name, for example, if the song has only one name div_number - "1"
         # if the song has several names, if want choose second name - div_number - "2", the third - div_number - "3", ect.
         wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="1")).click()
         self.check_cancel_button("song_name_edit")
@@ -241,8 +241,14 @@ class SongHelper:
         wd.find_element_by_id("writing_select_role_item_2").click()
 
     def fill_identifiers_fields_in_edit_entity_modal_window(self, data, entity):
+        wait = self.app.wait
+        locator_path_identifier = "//div[@class='form-group']/div[%s]/div/div[2]/span/li/div[2]/div/div[1]/div/a"
         self.identifiers_field_value(entity + "_ipicae_identification_new", data.ipicae)
         self.identifiers_field_value(entity + "_asap_identification_new", data.asap)
+        wait.until(EC.presence_of_element_located((By.XPATH, self.app.locator.edit_identifier(locator_path_identifier,
+                                                                                              div_number="2"))))
+        wait.until(EC.presence_of_element_located((By.XPATH, self.app.locator.edit_identifier(locator_path_identifier,
+                                                                                              div_number="3"))))
 
     def edit_entity_info_in_modal_window(self, new_data, entity_name, entity_identifier):
         wd = self.app.wd
@@ -250,27 +256,42 @@ class SongHelper:
         # xpath
         locator_path_name = "//div[@class='form-group']/div/div/div[2]/li[%s]/div[2]/div[1]/a"
         locator_path_identifier = "//div[@class='form-group']/div[%s]/div/div[2]/span/li/div[2]/div/div[1]/div/a"
-
-        wait.until(EC.presence_of_element_located((By.XPATH, self.app.locator.edit_identifier(locator_path_identifier,
-                                                                                              div_number="2"))))
-        wait.until(EC.presence_of_element_located((By.XPATH, self.app.locator.edit_identifier(locator_path_identifier,
-                                                                                              div_number="3"))))
         # edit song name
-        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
+        # div_number - sequence number of the entity (songwriter name or publisher name) name
+        # for example, if the entity has only one name div_number - "1"
+        # if the entity has several names, if want choose second name - div_number - "2", the third - div_number - "3", ect.
+        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="1")).click()
         self.check_cancel_button(entity_name + "_name_edit")
-        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="2")).click()
+        wd.find_element_by_xpath(self.app.locator.edit_name(locator_path_name, div_number="1")).click()
         self.change_data_value(entity_name + "_name_edit", new_data.name)
         # edit ipicae
+        # div_number - number of the corresponding identifier field
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="2")).click()
         self.check_cancel_button(entity_identifier + "_ipicae_identification_edit")
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="2")).click()
         self.change_data_value(entity_identifier + "_ipicae_identification_edit", new_data.ipicae)
         # edit asap
+        # div_number - number of the corresponding identifier field
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="3")).click()
         self.check_cancel_button(entity_identifier + "_asap_identification_edit")
         wd.find_element_by_xpath(self.app.locator.edit_identifier(locator_path_identifier, div_number="3")).click()
         self.change_data_value(entity_identifier + "_asap_identification_edit", new_data.asap)
-        self.save_button()
+
+    def check_filled_fields_in_entity_modal_window(self, name_value, ipicae_value, asap_value):
+        wd = self.app.wd
+        default_value = []
+        # switch to the desired element
+        modal_window = wd.find_element_by_class_name("modal-content")
+        # Use a variable modal_window to specify which element is searched for elements
+        fields_value = modal_window.find_elements_by_class_name("list-group")
+        for value in fields_value:
+            default_value.append(value.text)
+        while '' in default_value:
+            default_value.remove('')
+        assert len(default_value) == 4, "At creation the superfluous fields are filled"
+        assert name_value in default_value, "Does not match the values that were entered when creating"
+        assert ipicae_value in default_value, "Does not match the values that were entered when creating"
+        assert asap_value in default_value, "Does not match the values that were entered when creating"
 
     def open_dropdown_menu(self, entity_number):
         # drop-down menu to add share or deal

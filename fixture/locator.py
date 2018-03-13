@@ -72,6 +72,10 @@ class LocatorHelper:
         locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/div/span/div/div/div[2]/div/button"
         return locator % (div_number)
 
+    def share_button_color_locator(self, color):
+        locator = "dropdown-toggle.btn-%s.btn.btn-inline"
+        return locator % (color)
+
     def item_in_share_dropdown_menu_locator(self, div_number, li_number):
         locator = "//div[@class='col-sm-12']/div[2]/span/div[%s]/div/div/div/span/div/div/div[2]/div/ul/li[%s]/a"
         return locator % (div_number, li_number)
@@ -87,3 +91,10 @@ class LocatorHelper:
     def remove_media_type_button_locator(self, div_number):
         locator = "//div[@id='media_type_select']/div[%s]/span[2]"
         return locator % (div_number)
+
+    def add_directive_button_locator(self, div_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[2]/div/div[1]/h4/button"
+        return locator % (div_number)
+
+    def fields_in_directives_modal_window_locator(self):
+        locator = ""

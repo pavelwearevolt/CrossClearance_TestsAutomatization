@@ -20,8 +20,10 @@ def test_add_share(app):
     app.song.open_dropdown_menu(entity_number="1")
     app.song.open_modal_window(entity_number="1", function_number="1")
     app.song.fill_share_form(
+        territory_field_id="territory_search",
         territory="world",
         territory_locator="tt-suggestion.suggestion-0",
+        percentage_field_id="share-percentage-input",
         percentage="60"
         )
 
@@ -44,50 +46,50 @@ def test_add_deal_tab_songwriter(app):
     app.song.open_modal_window(entity_number="1", function_number="2")
     app.song.check_entity_in_new_deal_modal_window(entity_id="songwriter_select", entity_name="person_songwriter_#1")
     # fill publisher field
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="publishing_select",
         field_value="company_publisher_#1",
         field_locator="3"
         )
     # fill Licensed Territory field
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="licenced_territory_select",
         field_value="World",
         field_locator="4"
         )
     # fill field license origin
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="license_origin_select",
         field_value="World",
         field_locator="5"
         )
     # fill field media type
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Grand Rights",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Mechanical/Reproduction",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Performance Rights",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Synchronization",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Print Music",
         field_locator="6"
         )
-    app.song.fill_percentage_field(percentage="50")
+    app.song.fill_percentage_field(percentage_field_id="share-percentage-input", percentage="50")
     app.song.save_button()
     time.sleep(3)
 
@@ -112,9 +114,9 @@ def test_share_in_dispute(app):
         )
     # warning (share in dispute) share button color - "rgb(240, 173, 78)"
     # check share button of first songwriter
-    app.song.check_share_button_in_dispute_and_not(songwriter_number="1", button_color="rgb(240, 173, 78)")
+    app.song.check_share_button_in_dispute_or_not(songwriter_number="1", button_color="rgb(240, 173, 78)")
     # check share button of second songwriter
-    app.song.check_share_button_in_dispute_and_not(songwriter_number="2", button_color="rgb(240, 173, 78)")
+    app.song.check_share_button_in_dispute_or_not(songwriter_number="2", button_color="rgb(240, 173, 78)")
 
 
 def test_edit_share(app):
@@ -137,9 +139,9 @@ def test_edit_share(app):
 def test_share_is_not_in_dispute(app):
     # normal (share is not in dispute) share button color - rgb(85, 201, 166)
     # check share button of first songwriter
-    app.song.check_share_button_in_dispute_and_not(songwriter_number="1", button_color="rgb(85, 201, 166)")
+    app.song.check_share_button_in_dispute_or_not(songwriter_number="1", button_color="rgb(85, 201, 166)")
     # check share button of second songwriter
-    app.song.check_share_button_in_dispute_and_not(songwriter_number="2", button_color="rgb(85, 201, 166)")
+    app.song.check_share_button_in_dispute_or_not(songwriter_number="2", button_color="rgb(85, 201, 166)")
 
 
 #def test_deal_in_dispute(app):
@@ -211,28 +213,28 @@ def test_edit_deal_tab_songwriters(app):
     app.song.choose_item_in_deal_dropdown_menu(entity_number="1", item_number="1")
     # edit songwriter field
     app.song.clear_field_in_new_deal_modal_window(field_id="songwriter_select")
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="songwriter_select",
         field_value="person_songwriter_#1",
         field_locator="2"
         )
     # edit publisher fields
     app.song.clear_field_in_new_deal_modal_window(field_id="publishing_select")
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="publishing_select",
         field_value="company_publisher_#1",
         field_locator="3"
         )
     # edit Licensed Territory field
     app.song.clear_field_in_new_deal_modal_window(field_id="licenced_territory_select")
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="licenced_territory_select",
         field_value="World",
         field_locator="4"
         )
     # edit field license origin
     app.song.clear_field_in_new_deal_modal_window(field_id="license_origin_select")
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="license_origin_select",
         field_value="World",
         field_locator="5"
@@ -243,32 +245,32 @@ def test_edit_deal_tab_songwriters(app):
     app.song.remove_one_of_chosen_media_type(type_number="1")
     # remove all media types
     app.song.clear_field_in_new_deal_modal_window(field_id="media_type_select")
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Grand Rights",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Mechanical/Reproduction",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Performance Rights",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Synchronization",
         field_locator="6"
         )
-    app.song.fill_field_in_new_deal_modal_window(
+    app.song.fill_field_in_new_deal_directives_modal_window(
         field_id="media_type_select",
         field_value="Print Music",
         field_locator="6"
         )
-    app.song.fill_percentage_field(percentage="40")
+    app.song.fill_percentage_field(percentage="40", percentage_field_id="share-percentage-input")
     app.song.save_button()
     time.sleep(3)
 

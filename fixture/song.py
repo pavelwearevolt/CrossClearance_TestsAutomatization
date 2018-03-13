@@ -324,28 +324,31 @@ class SongHelper:
         wd = self.app.wd
         wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[3]/span/button[1]").click()
 
-    def fill_share_form(self, territory, territory_locator, percentage):
-        wd = self.app.wd
-        wd.find_element_by_id("territory_search").click()
-        wd.find_element_by_id("territory_search").clear()
-        wd.find_element_by_id("territory_search").send_keys(territory)
-        wd.find_element_by_class_name(territory_locator).click()
-        self.fill_percentage_field(percentage)
+    def fill_share_form(self, territory_field_id, territory, territory_locator, percentage_field_id, percentage):
+        self.fill_territory_field(territory, territory_locator, territory_field_id)
+        self.fill_percentage_field(percentage_field_id, percentage)
         self.save_button()
         time.sleep(3)
 
-    def fill_percentage_field(self, percentage):
+    def fill_territory_field(self, territory_field_id, territory, territory_locator):
         wd = self.app.wd
-        wd.find_element_by_id("share-percentage-input").click()
-        wd.find_element_by_id("share-percentage-input").clear()
-        wd.find_element_by_id("share-percentage-input").send_keys(percentage)
+        wd.find_element_by_id(territory_field_id).click()
+        wd.find_element_by_id(territory_field_id).clear()
+        wd.find_element_by_id(territory_field_id).send_keys(territory)
+        wd.find_element_by_class_name(territory_locator).click()
+
+    def fill_percentage_field(self, percentage_field_id, percentage):
+        wd = self.app.wd
+        wd.find_element_by_id(percentage_field_id).click()
+        wd.find_element_by_id(percentage_field_id).clear()
+        wd.find_element_by_id(percentage_field_id).send_keys(percentage)
 
     def check_entity_in_new_deal_modal_window(self, entity_id, entity_name):
         wd = self.app.wd
         element = wd.find_element_by_xpath(self.app.locator.new_deal_entity_locator(entity_id)).text
         assert element == entity_name
 
-    def fill_field_in_new_deal_modal_window(self, field_id, field_value, field_locator):
+    def fill_field_in_new_deal_directives_modal_window(self, field_id, field_value, field_locator):
         wd = self.app.wd
         items_list = []
         # выбрать какое поле будет заполнено
@@ -366,13 +369,6 @@ class SongHelper:
     def clear_field_in_new_deal_modal_window(self, field_id):
         wd = self.app.wd
         wd.find_element_by_id(field_id + "_clear").click()
-
-    def check_share_button_in_dispute_and_not(self, songwriter_number, button_color):
-        wd = self.app.wd
-        # check share button color
-        element_color = wd.find_element_by_xpath(self.app.locator.share_button_locator(
-            div_number=songwriter_number)).value_of_css_property("background-color")
-        assert element_color == button_color, "Wrong color of share button"
 
     def open_share_dropdown_menu(self, songwriter_number):
         wd = self.app.wd
@@ -408,8 +404,15 @@ class SongHelper:
         # type_number - sequence number of chosen media types in field Media Types
         wd.find_element_by_xpath(self.app.locator.remove_media_type_button_locator(div_number=type_number)).click()
 
+    def open_add_directives_modal_window(self, songwriter_number):
+        # songwriter_number - sequence number of songwriter
+        wd = self.app.wd
+        wd.find_element_by_xpath(self.app.locator.add_directive_button_locator(div_number=songwriter_number)).click()
 
-
+    def choose_media_types_directives(self, field_id, item_number):
+        wd = self.app.wd
+        wd.find_element_by_id(field_id).click()
+        wd.find_element_by_id("media_type_select_item_" + item_number).click()
 
 #    def delete_song(self):
 #        wd = self.app.wd

@@ -414,6 +414,65 @@ class SongHelper:
         wd.find_element_by_id(field_id).click()
         wd.find_element_by_id("media_type_select_item_" + item_number).click()
 
+    def open_directive_actions_menu(self, songwriter_number, directive_number):
+        wd = self.app.wd
+        # songwriter_number - sequence number of songwriter
+        # directive_number - sequence number of directive in current songwriter
+        wd.find_element_by_xpath(self.app.locator.directives_action_button_locator(
+            div_1_number=songwriter_number,
+            div_2_number=directive_number
+            )).click()
+
+    def choose_item_in_action_menu(self, songwriter_number, directive_number, item_number):
+        wd = self.app.wd
+        # songwriter_number - sequence number of songwriter
+        # directive_number - sequence number of directive in current songwriter
+        # item_number - number of item in directive dropdown menu "actions"
+        wd.find_element_by_xpath(self.app.locator.item_in_directive_action_menu_locator(
+            div_1_number=songwriter_number,
+            div_2_number=directive_number,
+            li_number=item_number
+            )).click()
+
+    def clear_directive_field(self, field_name):
+        wd = self.app.wd
+        # field_name - name of the field in edit directive modal window:
+        # care_of
+        # licensee
+        # payee
+        # payment_recipient
+        # license_origin_select
+        wd.find_element_by_id(field_name + "_cancel").click()
+
+    def close_directive_modal_window_button_cancel(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/div[2]/button[1]").click()
+
+    def create_new_entity_in_directive_modal_window(self, field_name, entity_name):
+        wd = self.app.wd
+        wd.find_element_by_id(field_name + "_search").click()
+        wd.find_element_by_id(field_name + "_search").send_keys(entity_name)
+        wd.find_element_by_id(field_name + "_create").click()
+
+    def open_copyright_collective_modal_window(self, songwriter_number):
+        wd = self.app.wd
+        # choose songwriter for which will be added copyright collectives
+        songwriter = wd.find_element_by_xpath(self.app.locator.choose_songwriter_copyright_collective_locator(
+            div_number=songwriter_number
+            ))
+        songwriter.find_element_by_id("add-collective").click()
+
+    def add_copyright_collective(self, collective_name, collective):
+        wd = self.app.wd
+        wd.find_element_by_id("undefined_search").click()
+        # search collective by name
+        wd.find_element_by_id("undefined_search").send_keys(collective_name)
+        # choose collective from search result, choose collective in dropdown menu by "class_name"
+        wd.find_element_by_class_name(collective).click()
+
+
+
+
 #    def delete_song(self):
 #        wd = self.app.wd
 #        wait = self.app.wait

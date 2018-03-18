@@ -96,5 +96,16 @@ class LocatorHelper:
         locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[2]/div/div[1]/h4/button"
         return locator % (div_number)
 
-    def fields_in_directives_modal_window_locator(self):
-        locator = ""
+    def directives_action_button_locator(self, div_1_number, div_2_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[2]/div/div[2]/span/div[%s]/div/div/div/div[2]" +\
+                "/div/div/div[2]/div/div/button"
+        return locator % (div_1_number, div_2_number)
+
+    def item_in_directive_action_menu_locator(self, div_1_number, div_2_number, li_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[2]/div/div[2]/span/div[%s]/div/div/div/div[2]" +\
+                "/div/div/div[2]/div/div/ul/li[%s]/a"
+        return locator % (div_1_number, div_2_number, li_number)
+
+    def choose_songwriter_copyright_collective_locator(self, div_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]"
+        return locator % (div_number)

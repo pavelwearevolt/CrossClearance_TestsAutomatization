@@ -427,7 +427,9 @@ class SongHelper:
         wd = self.app.wd
         # songwriter_number - sequence number of songwriter
         # directive_number - sequence number of directive in current songwriter
-        # item_number - number of item in directive dropdown menu "actions"
+        # item_number - number of item in directive dropdown menu "actions":
+        # "1" - edit
+        # "3" - remove
         wd.find_element_by_xpath(self.app.locator.item_in_directive_action_menu_locator(
             div_1_number=songwriter_number,
             div_2_number=directive_number,
@@ -453,6 +455,20 @@ class SongHelper:
         wd.find_element_by_id(field_name + "_search").click()
         wd.find_element_by_id(field_name + "_search").send_keys(entity_name)
         wd.find_element_by_id(field_name + "_create").click()
+
+    def confirm_remove(self):
+        wd = self.app.wd
+        modal_window = wd.find_element_by_class_name("modal-content")
+        modal_window.find_element_by_class_name("btn.btn-danger").click()
+
+    def check_style_of_remove_modal_window(self, title, message):
+        wd = self.app.wd
+        modal_window = wd.find_element_by_class_name("modal-content")
+        title_text = modal_window.find_element_by_class_name("modal-title").text
+        assert title_text == title, "Wrong window title"
+        message_text = modal_window.find_element_by_class_name("bg-hoverblue.fg-black50.text-center").text
+        assert message_text == message, "Wrong message text"
+
 
     def open_copyright_collective_modal_window(self, songwriter_number):
         wd = self.app.wd

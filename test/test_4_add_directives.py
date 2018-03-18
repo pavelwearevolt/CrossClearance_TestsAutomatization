@@ -1,4 +1,5 @@
 __author__ = 'pavelkosicin'
+import time
 
 
 def test_add_directives(app):
@@ -39,3 +40,49 @@ def test_add_directives(app):
         percentage="50"
         )
     app.song.save_button()
+    time.sleep(3)
+
+
+def test_remove_directive(app):
+    # songwriter_number - sequence number of songwriter
+    # directive_number - sequence number of directive in current songwriter
+    app.song.open_directive_actions_menu(
+        songwriter_number="1",
+        directive_number="1"
+        )
+    # songwriter_number - sequence number of songwriter
+    # directive_number - sequence number of directive in current songwriter
+    # item_number - number of item in directive dropdown menu "actions":
+    # "1" - edit
+    # "3" - remove
+    app.song.choose_item_in_action_menu(
+        songwriter_number="1",
+        directive_number="1",
+        item_number="3"
+        )
+    app.song.close_directive_modal_window_button_cancel()
+    app.song.open_directive_actions_menu(
+        songwriter_number="1",
+        directive_number="1"
+        )
+    app.song.choose_item_in_action_menu(
+        songwriter_number="1",
+        directive_number="1",
+        item_number="3"
+        )
+    app.song.close_modal_window_button_close()
+    app.song.open_directive_actions_menu(
+        songwriter_number="1",
+        directive_number="1"
+        )
+    app.song.choose_item_in_action_menu(
+        songwriter_number="1",
+        directive_number="1",
+        item_number="3"
+        )
+    app.song.check_style_of_remove_modal_window(
+        title="Confirm remove Directive",
+        message="Are you sure you want to remove directive?"
+        )
+    app.song.confirm_remove()
+    time.sleep(3)

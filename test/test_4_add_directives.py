@@ -60,7 +60,7 @@ def test_remove_directive(app):
         directive_number="1",
         item_number="3"
         )
-    app.song.close_directive_modal_window_button_cancel()
+    app.song.close_modal_window_button_cancel()
     app.song.open_directive_actions_menu(
         songwriter_number="1",
         directive_number="1"
@@ -81,6 +81,7 @@ def test_remove_directive(app):
         item_number="3"
         )
     app.song.check_style_of_remove_modal_window(
+        element_class_name="bg-hoverblue.fg-black50.text-center",
         title="Confirm remove Directive",
         message="Are you sure you want to remove directive?"
         )

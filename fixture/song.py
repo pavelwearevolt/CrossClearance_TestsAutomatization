@@ -317,12 +317,14 @@ class SongHelper:
     def close_modal_window_button_close(self):
         # close the window using the cross in the upper left corner
         wd = self.app.wd
-        wd.find_element_by_class_name("close").click()
+        modal_window = wd.find_element_by_class_name("modal-content")
+        modal_window.find_element_by_class_name("close").click()
 
     def close_modal_window_button_cancel(self):
         # close the window using the button cancel
         wd = self.app.wd
-        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[3]/span/button[1]").click()
+        modal_window = wd.find_element_by_class_name("modal-content")
+        modal_window.find_element_by_class_name("btn.btn-").click()
 
     def fill_share_form(self, territory_field_id, territory, territory_locator, percentage_field_id, percentage):
         self.fill_territory_field(territory, territory_locator, territory_field_id)
@@ -423,7 +425,7 @@ class SongHelper:
             div_2_number=directive_number
             )).click()
 
-    def choose_item_in_action_menu(self, songwriter_number, directive_number, item_number):
+    def choose_item_in_directive_action_menu(self, songwriter_number, directive_number, item_number):
         wd = self.app.wd
         # songwriter_number - sequence number of songwriter
         # directive_number - sequence number of directive in current songwriter
@@ -446,10 +448,6 @@ class SongHelper:
         # license_origin_select
         wd.find_element_by_id(field_name + "_cancel").click()
 
-    def close_directive_modal_window_button_cancel(self):
-        wd = self.app.wd
-        wd.find_element_by_xpath("/html/body/div[3]/div/div[2]/div/div/div[2]/div[2]/button[1]").click()
-
     def create_new_entity_in_directive_modal_window(self, field_name, entity_name):
         wd = self.app.wd
         wd.find_element_by_id(field_name + "_search").click()
@@ -461,14 +459,13 @@ class SongHelper:
         modal_window = wd.find_element_by_class_name("modal-content")
         modal_window.find_element_by_class_name("btn.btn-danger").click()
 
-    def check_style_of_remove_modal_window(self, title, message):
+    def check_style_of_remove_modal_window(self, title, message, element_class_name):
         wd = self.app.wd
         modal_window = wd.find_element_by_class_name("modal-content")
         title_text = modal_window.find_element_by_class_name("modal-title").text
         assert title_text == title, "Wrong window title"
-        message_text = modal_window.find_element_by_class_name("bg-hoverblue.fg-black50.text-center").text
+        message_text = modal_window.find_element_by_class_name(element_class_name).text
         assert message_text == message, "Wrong message text"
-
 
     def open_copyright_collective_modal_window(self, songwriter_number):
         wd = self.app.wd
@@ -485,6 +482,22 @@ class SongHelper:
         wd.find_element_by_id("undefined_search").send_keys(collective_name)
         # choose collective from search result, choose collective in dropdown menu by "class_name"
         wd.find_element_by_class_name(collective).click()
+
+    def open_cc_actions_menu(self, songwriter_number):
+        wd = self.app.wd
+        # songwriter_number - sequence number of songwriter
+        wd.find_element_by_xpath(self.app.locator.cc_action_button_locator(div_number=songwriter_number)).click()
+
+    def choose_item_in_cc_action_menu(self, songwriter_number, item_number):
+        wd = self.app.wd
+        # songwriter_number - sequence number of songwriter
+        # item_number - number of item in directive dropdown menu "actions":
+        # "1" - edit
+        # "3" - remove
+        wd.find_element_by_xpath(self.app.locator.item_in_cc_action_menu_locator(
+            div_number=songwriter_number,
+            li_number=item_number
+            )).click()
 
 
 

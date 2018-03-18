@@ -109,3 +109,14 @@ class LocatorHelper:
     def choose_songwriter_copyright_collective_locator(self, div_number):
         locator = "//form[@class='form-horizontal']/div[2]/div[%s]"
         return locator % (div_number)
+
+    def cc_action_button_locator(self, div_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[2]/span/div/div/div/div/div/div[2]/div[1]/div[2]" +\
+                  "/div/div/button"
+        return locator % (div_number)
+
+    def item_in_cc_action_menu_locator(self, div_number, li_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[2]/span/div/div/div/div/div/div[2]/div[1]/div[2]" +\
+                 "/div/div/ul/li[%s]/a"
+        return locator % (div_number, li_number)
+

@@ -120,3 +120,18 @@ class LocatorHelper:
                  "/div/div/ul/li[%s]/a"
         return locator % (div_number, li_number)
 
+    def cc_songwriter_number_locator(self, div_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]"
+        return locator % (div_number)
+
+    def cc_songwriter_name_locator(self, div_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[1]/h4/span[1]"
+        return locator % (div_number)
+
+    def cc_publisher_name_locator(self, div_1_number, div_2_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[3]/div[%s]/div[1]/h4/span[2]"
+        return locator % (div_1_number, div_2_number)
+
+    def add_cci_button_locator(self,div_1_number, div_2_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[3]/div[%s]/div[1]/h4/span[3]/button"
+        return locator % (div_1_number, div_2_number)

@@ -499,8 +499,70 @@ class SongHelper:
             li_number=item_number
             )).click()
 
+    def open_copyright_collective_info_modal_window(self, songwriter_number, publisher_number):
+        wd = self.app.wd
+        wd.find_element_by_xpath(self.app.locator.add_cci_button_locator(
+            div_1_number=songwriter_number,
+            div_2_number=publisher_number
+            )).click()
 
+    def cc_name(self, songwriter_number):
+        wd = self.app.wd
+        # find name of created Copyright Collective
+        # songwriter_number - sequence number of songwriter
+        songwriter = wd.find_element_by_xpath(self.app.locator.cc_songwriter_number_locator(div_number=songwriter_number))
+        cc_name = songwriter.find_element_by_class_name("col-xs-10").text
+        return cc_name
 
+    def cc_songwriter_name(self, songwriter_number):
+        wd = self.app.wd
+        songwriter = wd.find_element_by_xpath(self.app.locator.cc_songwriter_name_locator(div_number=songwriter_number)).text
+        return songwriter
+
+    def cci_publisher_name(self, songwriter_number, publisher_number):
+        wd = self.app.wd
+        publisher = wd.find_element_by_xpath(self.app.locator.cc_publisher_name_locator(
+            div_1_number=songwriter_number,
+            div_2_number=publisher_number
+            )).text
+        return publisher
+
+    def check_society_field_value(self):
+        wd = self.app.wd
+        modal_window = wd.find_element_by_class_name("modal-content")
+        # value of field "Society"
+        field_value = modal_window.find_element_by_id("undefined_search").get_attribute("value")
+        return field_value
+
+    def create_imprint(self, imprint_name):
+        wd = self.app.wd
+        modal_window = wd.find_element_by_class_name("modal-content")
+        modal_window.find_element_by_id("imprint_search").click()
+        modal_window.find_element_by_id("imprint_search").send_keys(imprint_name)
+        modal_window.find_element_by_id("imprint_create").click()
+
+    def open_represents_dropdown_field(self):
+        wd = self.app.wd
+        modal_window = wd.find_element_by_class_name("modal-content")
+        modal_window.find_element_by_id("represented_select").click()
+
+    def represents_publisher_name(self):
+        wd = self.app.wd
+        publisher_name = wd.find_element_by_id("represented_select_item_Publisher").text
+        return publisher_name
+
+    def represents_songwriter_name(self):
+        wd = self.app.wd
+        songwriter_name = wd.find_element_by_id("represented_select_item_Songwriter").text
+        return songwriter_name
+
+    def choose_represents(self, represents_id):
+        wd = self.app.wd
+        modal_window = wd.find_element_by_class_name("modal-content")
+        # represents_id - songwriter or publisher id in field "Represents" in modal window "Create Copyright Collective Info"
+        # songwriter id - "represented_select_item_Publisher"
+        # publisher id - "represented_select_item_Songwriter"
+        modal_window.find_element_by_id(represents_id).click()
 
 #    def delete_song(self):
 #        wd = self.app.wd

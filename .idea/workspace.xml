@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/fixture/locator.py" afterPath="$PROJECT_DIR$/fixture/locator.py" />
       <change beforePath="$PROJECT_DIR$/fixture/song.py" afterPath="$PROJECT_DIR$/fixture/song.py" />
       <change beforePath="$PROJECT_DIR$/other tests/testing_methods _test.py" afterPath="$PROJECT_DIR$/other tests/testing_methods _test.py" />
-      <change beforePath="$PROJECT_DIR$/test/test_4_add_directives.py" afterPath="$PROJECT_DIR$/test/test_4_add_directives.py" />
       <change beforePath="$PROJECT_DIR$/test/test_5_add_CC_and_CCI.py" afterPath="$PROJECT_DIR$/test/test_5_add_CC_and_CCI.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/other tests/testing_methods _test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="511">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <caret line="56" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="e#28#39#0" expanded="true" />
               </folding>
@@ -39,8 +38,8 @@
       <file leaf-file-name="song.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="466" column="81" lean-forward="false" selection-start-line="466" selection-start-column="81" selection-end-line="466" selection-end-column="81" />
+            <state relative-caret-position="170">
+              <caret line="526" column="19" lean-forward="false" selection-start-line="526" selection-start-column="19" selection-end-line="526" selection-end-column="19" />
               <folding>
                 <element signature="e#28#92#0" expanded="true" />
               </folding>
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_4_add_directives.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_4_add_directives.py">
+      <file leaf-file-name="locator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/locator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="83" column="41" lean-forward="false" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+            <state relative-caret-position="388">
+              <caret line="135" column="107" lean-forward="false" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -61,28 +60,8 @@
       <file leaf-file-name="test_5_add_CC_and_CCI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_5_add_CC_and_CCI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="82" lean-forward="true" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_3_add_share_deal_check_dispute.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="locator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fixture/locator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="117" column="13" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="38" />
+            <state relative-caret-position="196">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,8 +137,8 @@
         <option value="$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py" />
         <option value="$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py" />
         <option value="$PROJECT_DIR$/test/test_5_add_copyright_collective_and_copyright_collective_info.py" />
-        <option value="$PROJECT_DIR$/fixture/locator.py" />
         <option value="$PROJECT_DIR$/test/test_4_add_directives.py" />
+        <option value="$PROJECT_DIR$/fixture/locator.py" />
         <option value="$PROJECT_DIR$/fixture/song.py" />
         <option value="$PROJECT_DIR$/other tests/testing_methods _test.py" />
         <option value="$PROJECT_DIR$/test/test_5_add_CC_and_CCI.py" />
@@ -253,6 +232,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="create_imprint&#9;null&#9;null" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -448,34 +428,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 13h 53m 54s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.19 at 20h 56m 43s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 13h 55m 12s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.19 at 21h 00m 42s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 13h 59m 17s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.19 at 21h 02m 19s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 14h 02m 18s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.19 at 21h 12m 48s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 14h 07m 04s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.20 at 10h 51m 31s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 14h 09m 29s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.20 at 11h 00m 07s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 14h 10m 49s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.20 at 11h 03m 14s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 14h 16m 04s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.20 at 11h 04m 44s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 14h 17m 26s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.20 at 11h 06m 20s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.18 at 14h 19m 31s.xml">
+    <history-entry file="py_test_in_testing_methods__test_py - 2018.03.20 at 11h 07m 28s.xml">
       <configuration name="py.test in testing_methods _test.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -496,13 +476,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28899637" sideWeight="0.50599015" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28899637" sideWeight="0.49400985" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.49612403" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28899637" sideWeight="0.49400985" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2840028" sideWeight="0.29081634" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -759,19 +739,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_5_add_copyright_collective_and_copyright_collective_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_5_add_copyright_collective_and_copyright_collective_info.py" />
     <entry file="file://$PROJECT_DIR$/test/test_2_add_songwriters_publishers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,33 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/locator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="117" column="13" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="466" column="81" lean-forward="false" selection-start-line="466" selection-start-column="81" selection-end-line="466" selection-end-column="81" />
-          <folding>
-            <element signature="e#28#92#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,14 +765,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="83" column="41" lean-forward="false" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_3_add_share_deal_check_dispute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/locator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="135" column="107" lean-forward="false" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="107" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/song.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="526" column="19" lean-forward="false" selection-start-line="526" selection-start-column="19" selection-end-line="526" selection-end-column="19" />
+          <folding>
+            <element signature="e#28#92#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/other tests/testing_methods _test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <caret line="56" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="e#28#39#0" expanded="true" />
           </folding>
@@ -837,8 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_5_add_CC_and_CCI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="82" lean-forward="true" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
+        <state relative-caret-position="196">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>

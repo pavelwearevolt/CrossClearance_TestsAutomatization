@@ -135,3 +135,13 @@ class LocatorHelper:
     def add_cci_button_locator(self,div_1_number, div_2_number):
         locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[3]/div[%s]/div[1]/h4/span[3]/button"
         return locator % (div_1_number, div_2_number)
+
+    def cci_action_button_locator(self, div_1_number, div_2_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[3]/div[%s]/div[2]/div/span/div/div/div/div" +\
+                  "/div[2]/div/div/div[2]/div/button"
+        return locator %  (div_1_number, div_2_number)
+
+    def item_in_cci_action_menu_locator(self, div_1_number, div_2_number, li_number):
+        locator = "//form[@class='form-horizontal']/div[2]/div[%s]/div[3]/div[%s]/div[2]/div/span/div/div/div/div" +\
+                  "/div[2]/div/div/div[2]/div/ul/li[%s]/a"
+        return locator % (div_1_number, div_2_number, li_number)

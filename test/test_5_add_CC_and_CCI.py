@@ -76,3 +76,47 @@ def test_remove_copyright_collective(app):
     app.song.confirm_remove()
     time.sleep(3)
 
+def test_remove_cci(app):
+    # songwriter_number - sequence number of songwriter
+    # publisher_number - sequence number of publisher
+    app.song.open_cci_actions_menu(
+        songwriter_number="1",
+        publisher_number="1"
+        )
+    # songwriter_number - sequence number of songwriter
+    # publisher_number - sequence number of publisher
+    # item_number - number of item in directive dropdown menu "actions":
+    # "1" - edit
+    # "3" - remove
+    app.song.choose_item_in_cci_action_menu(
+        songwriter_number="1",
+        publisher_number="1",
+        item_number="3"
+        )
+    app.song.close_modal_window_button_cancel()
+    app.song.open_cci_actions_menu(
+        songwriter_number="1",
+        publisher_number="1"
+        )
+    app.song.choose_item_in_cci_action_menu(
+        songwriter_number="1",
+        publisher_number="1",
+        item_number="3"
+        )
+    app.song.close_modal_window_button_close()
+    app.song.open_cci_actions_menu(
+        songwriter_number="1",
+        publisher_number="1"
+        )
+    app.song.choose_item_in_cci_action_menu(
+        songwriter_number="1",
+        publisher_number="1",
+        item_number="3"
+        )
+    app.song.check_style_of_remove_modal_window(
+        element_class_name="bg-hoverblue.fg-black50.text-center",
+        title="Confirm remove Copyright Collective Info",
+        message="Are you sure you want to remove copyright collective info?"
+        )
+    app.song.confirm_remove()
+    time.sleep(3)

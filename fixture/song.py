@@ -564,6 +564,29 @@ class SongHelper:
         # publisher id - "represented_select_item_Songwriter"
         modal_window.find_element_by_id(represents_id).click()
 
+    def open_cci_actions_menu(self, songwriter_number, publisher_number):
+        wd = self.app.wd
+        # songwriter_number - sequence number of songwriter
+        # publisher_number - sequence number of publisher
+        wd.find_element_by_xpath(self.app.locator.cci_action_button_locator(
+            div_1_number=songwriter_number,
+            div_2_number=publisher_number
+            )).click()
+
+    def choose_item_in_cci_action_menu(self, songwriter_number, publisher_number, item_number):
+        wd = self.app.wd
+        # songwriter_number - sequence number of songwriter
+        # publisher_number - sequence number of publisher
+        # item_number - number of item in directive dropdown menu "actions":
+        # "1" - edit
+        # "3" - remove
+        wd.find_element_by_xpath(self.app.locator.item_in_cci_action_menu_locator(
+            div_1_number=songwriter_number,
+            div_2_number=publisher_number,
+            li_number=item_number
+            )).click()
+
+
 #    def delete_song(self):
 #        wd = self.app.wd
 #        wait = self.app.wait
